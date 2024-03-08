@@ -1,0 +1,34 @@
+.container {
+    margin-top: 3rem;
+}
+
+button {
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+
+a:hover {
+    color: rgb(172, 123, 0);
+    scale: 110%;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.logo-span-1 {
+    margin-top: 0.2rem;
+    display: block;
+    line-height: 1.3rem;
+    color: rgb(69, 69, 69);
+    cursor: default;
+    padding: 0.8rem 0.7rem 0.8rem 0;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.logo-span-2 {
+    font-size: 1.4em;
+    font-weight: 500;
+    width: 3rem;
+}

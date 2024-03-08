@@ -1,0 +1,114 @@
+.card-img-top{
+
+    transition: all 3.0s ease-in;
+}
+.card {
+    box-shadow: 0 4px 6px rgba(172, 123, 0, 0.544);
+    transition: transform 0.3s;
+    overflow: hidden;
+    height: 27rem !important;
+    cursor: default;
+    margin-bottom: 4em;
+    align-self: center;
+}
+
+.c-ind {
+    background-color: goldenrod !important;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    scale: 100%;
+}
+
+.carousel-inner {
+    background-color: rgb(244, 244, 244);
+    box-shadow: inset 0px 0px 20px rgba(145, 145, 145, 0.559);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    .card-img-top {
+        scale: 120%;
+    }
+}
+.btn{
+    transition: all 0.2s ease-in-out;
+    background-color:  rgb(172, 123, 0);
+    border: 1px solid  rgb(172, 123, 0);
+    border-radius: 12px;
+    text-shadow: 1px;
+    color: white;
+    
+}
+
+
+.cards-div {
+    flex-wrap: wrap;
+}
+
+#cart-item-removal-btn {
+    color: red;
+    background-color: transparent;
+    border-radius: 2rem;
+}
+#cart-item-removal-btn:hover {
+    scale: 100%;
+    text-shadow: none !important;
+    filter: drop-shadow(none) !important;
+    color: darkred;
+    background-color: rgba(128, 128, 128, 0.153);
+}
+
+
+.btn:hover{
+    scale: 110%;
+background-color: transparent;
+color:  rgb(172, 123, 0);
+border: 1px solid  rgb(172, 123, 0);
+}
+.btn:active{
+    background-color: transparent;
+color:  rgb(172, 123, 0);
+border: 1px solid  rgb(172, 123, 0);
+}
+
+@media (max-width: 100px) {
+    .card {
+        width: 100%;
+    }
+    .card-img-top {
+        height: auto;
+    }
+}
+
+h1 {
+    z-index: 0 !important;
+}
+
+@media screen and (max-width: 346px) {
+    .card {
+        width: 10rem !important;
+        height: 15rem !important;
+    }
+    img {
+        height: 6rem !important;
+    }
+    h5 {
+        font-size: 0.7rem;
+    }
+    h6 {
+        font-size: 0.6rem;
+    }
+    button, button > * {
+        font-size: 0.5rem;
+        color: white;
+    }
+    button {
+        height: 2rem !important;
+    }
+}
+
+@media screen and (min-width:346px) {
+    .card {
+        width: 15rem !important;
+    }
+}

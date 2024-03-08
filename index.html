@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Calligraphy</title>
+
+    <!-- Links to online means --------------------------------------------------------------------------------------------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&family=Dancing+Script&family=Lato&family=Protest+Revolution&family=Protest+Riot&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet">
+
+    <!-- Local files are linked below: ------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="./Style/home.css">
+    <link rel="stylesheet" href="./Style/base.css">
+    <script src="./Scripts/jquery.js"></script>
+  </head>
+  <body>
+    <header>
+
+      <!-- This is the main Nav Bar div which contains ul > li > anchor elements -------------------------------------------->
+      <div
+        class="navbar navbar-expand-md justify-content-between bg-grey-gradient px-2 px-md-3">
+
+        <!-- This is the container which consists of the logo, and the two other divs containing links ---------------------->
+        <div class="container-fluid ">
+
+          <div class="logo-container d-flex align-items-center">
+            <img id="logo" src="./Assets/Images/logo.png" alt>
+            <span class="logo-span-1">uick <br><span class="logo-span-2">‎
+                Calligraphy</span></span>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerD" aria-controls="navbarTogglerDemo01"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-list "></span>
+          </button>
+
+          <div class="nav" style="width: 63%;">
+            <div class="nav collapse navbar-collapse justify-content-between"
+              id="navbarTogglerD">
+              <ul class="nav align-items-center">
+                <li class="nav-item">
+                  <a onclick="NavLinkClick()"
+                    class="nav-link activee tab-anchors" aria-current="page"
+                    href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a onclick="NavLinkClick()" class="nav-link tab-anchors"
+                    id="home-link" aria-current="page"
+                    href="learning.html">Learn</a>
+                </li>
+
+                <li class="nav-item">
+                  <a onclick="NavLinkClick()" class="nav-link tab-anchors"
+                    id="nav-shop-link" aria-current="page"
+                    href="shop.html">Store</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page"
+                    href="aboutus.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                  <a id="sa" class="nav-link tab-anchors" aria-current="page"
+                    href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+
+              <ul class="nav align-items-center">
+
+                <!-- Search Bar Div ------------------------------------------------------------------------->
+                <div id="SearchBarDiv"
+                  class="d-flex align-items-center d-none position-relative">
+                  <input type="text" id="search-input" name="search"
+                    placeholder="Search Around Here"
+                    style="margin-right: 0.4rem;">
+                  <button class="bi bi-search"
+                    onclick="SearchContent()"></button>
+                </div>
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#xyz"
+                    onclick="TriggerSearchBar()"><i class=" bi bi-search"
+                      id="search-btn"></i></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page"
+                    href="authentication.html" id="login-reg">Login/Register</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+
+    <!--------------------------------------------------------------------------------------------------------------------->
+
+    <div id="central-container"
+      class=" central-container row w-100 container-fluid py-5 bg-container parent-container">
+
+      <!-- This is the div which contains the filters, catagories and other things... ------------------------------------->
+      <div
+        class=" d-flex z-2 px-sm-2 col-2 col-sm-1 justify-content-around flex-column h-100 py-3 gap-5 position-sticky"
+        id="side-tabs">
+
+        <a id="side-tabs-toggler" class="bi-list my-2 ms-3" href="####"></a>
+
+        <li class="nav-item filters-li">
+          <a id="sa1"
+            class="filterElements tab-anchors px-2 py-1 rubik fe-overview"
+            href="#overview1" onclick="NavLinkClick()">Overview <i class="bi bi-box-arrow-up-right"></i></a>
+        </li>
+
+        <li class="nav-item filters-li">
+          <a class="filterElements tab-anchors px-2 py-1 fe-learn rubik"
+            href="learning.html" onclick="NavLinkClick()">Learn <i class="bi bi-box-arrow-up-right"></i></a>
+        </li>
+
+        <li class="nav-item filters-li">
+          <span class="p-shop px-2 filterElements">
+            <a class="filterElements tab-anchors px-2 py-1 fe-shop rubik"
+            href="shop.html" onclick="NavLinkClick()">Store <i class="bi bi-box-arrow-up-right"></i></a>
+          </span>
+          
+        </li>
+
+        <li class="nav-item filters-li">
+          <a onclick="NavLinkClick()"
+            class="filterElements fe-reg tab-anchors px-2 py-1 rubik"
+            href="authentication.html">Register  <i class="bi bi-box-arrow-up-right"></i></a>
+        </li>
+
+        <li class="nav-item filters-li">
+          <a id="sa2" onclick="NavLinkClick()"
+            class="filterElements fe-feedback tab-anchors px-2 py-1 rubik"
+            href="#feedback0">Feedback</a>
+        </li>
+
+        <li class="nav-item filters-li">
+          <a onclick="NavLinkClick()"
+            class="filterElements h-100 fe-contact tab-anchors px-2 py-1 rubik"
+            href="/contact.html">Contact</a>
+        </li>
+
+      </div>
+
+      <!-- Below is the Hero Section which contains all the Content ------------------------------------------------>
+      <section class="HeroSection z-2 w-100 py-5 col bg-white" id="HeroSection">
+
+        <!-- Container for the welcoming messages -->
+        <div
+          class=" container d-flex w-100 text-center flex-column align-content-center px-3 mt-4 mb-5">
+          <h1>Welcome to Quick Calligraphy!</h1>
+          <br>
+          <br>
+          <span class="para-span">Dive into the Exquisite World of
+            Calligraphy</span>
+          <br>
+          <p>Your one-stop shop for exploring the timeless art of beautiful
+            writing! Whether you're a complete beginner yearning to pick up your
+            first pen or a seasoned calligrapher seeking to delve into intricate
+            script variations, we have something for you.
+
+            At <b>Quick Calligraphy</b>, we believe the journey of calligraphy
+            is deeply personal. That's why we offer a curated learning
+            experience tailored to various skill levels. Our diverse learning
+            resources cater to beginners eager to master the fundamental
+            strokes, amateurs honing their technique, enthusiasts ready to
+            tackle complex styles, and advanced calligraphers seeking further
+            refinement.</p>
+          <br>
+          <span class="para-span">Embrace the richness of global calligraphy
+            traditions:</span>
+          <ul>
+            <br>
+            <li class="para-li"><b>Embark on a journey through Arabic
+                script:</b> Master the graceful fluidity of Nastaliq or the bold
+              elegance of Kufic. </li>
+            <br>
+            <li class="para-li"><b>Unravel the elegance of Latin
+                calligraphy:</b> Explore the flowing lines of Romanesque or the
+              playful charm of Italic.</li>
+            <br>
+            <li class="para-li"><b>Delve into the spiritual beauty of Islamic
+                calligraphy:</b> Discover the captivating geometric arrangements
+              of Thuluth or the intricate details of Naskh.</li>
+            <br>
+            <li class="para-li"><b>Uncover the ancient art of Greek
+                calligraphy:</b> Learn the unique letterforms of Uncial or the
+              flowing beauty of Majuscule.</li>
+            <br>
+            <li class="para-li"><b>Explore the mesmerizing scripts of the Indic
+                subcontinent:</b> Master the intricate details of Devanagari or
+              the rounded forms of Bengali.</li>
+            <br>
+            <li class="para-li"><b>Step into the world of Oriental
+                calligraphy:</b> Learn the expressive brushstrokes of Chinese
+              calligraphy or the delicate details of Japanese Kanji.</li><br>
+            <li class="para-li"><b>Discover the unique scripts of Mongolia: </b>
+              Explore the distinctive features of Soyombo or Todo script.</li>
+          </ul>
+
+          <span class="para-span">Beyond learning, we bring you treasures to
+            cherish:</span>
+          <p>Our expansive store showcases captivating calligraphies from
+            various traditions, hand-crafted by skilled artists. <strong>Find
+              exquisite pieces that resonate with your soul</strong>, whether
+            it's a personalized name in Arabic script, a motivational quote in
+            Latin calligraphy, or a verse from a sacred text in Islamic
+            calligraphy.
+            <br><br>
+            <b>Quick Calligraphy</b> is <strong>more than just a website; it's a
+              community</strong>. We connect you with passionate calligraphers
+            from around the globe, fostering a collaborative environment for
+            learning, sharing, and inspiring each other. Join us on this
+            creative journey and <strong>discover the magic of crafting words
+              into art!</strong></p>
+          <br>
+          <p>
+            Let the dance of your pen begin at <b>Quick Calligraphy</b>! Whether
+            you're a curious newcomer tracing your first letter or a seasoned
+            artist seeking fresh inspiration, we invite you to explore the
+            <strong>boundless joy of this ancient art</strong>. Dive into our
+            learning resources, each step unlocking new possibilities — or Delve
+            into our store treasures, where each piece whispers stories waiting
+            to be told. At Quick Calligraphy, <strong>the magic of learning
+              meets the beauty of owning, hand in hand</strong>. So, pick up
+            your pen, unleash your creativity, and discover the world where
+            <strong>beautiful writing becomes a journey of endless
+              happiness</strong>!
+          </p>
+          <br><br><br>
+          <span class="span2">X-X-X</span>
+
+        </div>
+
+        <!-- The container for the  O V E R V I E W  of the calligraphy -->
+        <span id="overview1"></span>
+        <div id="cd1"
+          class="content-div container d-flex w-100 text-center flex-column align-content-center py-5 px-3 mb-5 mt-4 border-bottom border-top">
+          <h1 class="py-4">An Overview at Calligraphy</h1>
+          <div class="para-div">
+            <p class>
+              <br>
+              <span class="para-span">Early Beginnings</span>
+              <br>
+              Tracing its roots back as far as <b>3500 B.C.</b>, the earliest
+              forms of calligraphy emerged in <strong>Mesopotamia</strong>,
+              where scribes meticulously carved cuneiform inscriptions onto clay
+              tablets.
+              Around <b>3000 B.C.</b>, Egyptians developed hieroglyphics, a
+              complex writing system combining logograms, phonograms, and
+              determinatives.
+              In <strong>China</strong>, the earliest evidence of calligraphy
+              dates to the <strong>Shang Dynasty</strong> (<b>1600</b>- <b>1046
+                B.C</b>), with inscriptions on oracle bones and bronze vessels.
+              <br>
+              <br>
+
+              <span class="para-span">Regional Flourishing</span>
+              <ul>
+                Across the globe, various cultures developed their own unique
+                calligraphic styles: <br><br>
+                <li class="para-li"><strong>India</strong>: Brahmi script
+                  evolved, later giving rise to Devanagari and other regional
+                  scripts.</li>
+                <br>
+                <li class="para-li"><strong>Greece</strong>: The development of
+                  the Greek alphabet led to beautiful inscriptions on pottery
+                  and other surfaces.</li>
+                <br>
+                <li class="para-li"><strong>Arabic world</strong>: The emergence
+                  of Islam in the <b>7th century</b> spurred the development of
+                  Arabic calligraphy, renowned for its intricate geometric
+                  patterns and expressive flourishes.</li>
+              </ul>
+
+              <span class="para-span">Spread and Evolution</span>
+              <ul>
+                <li class="para-li">The invention of paper in
+                  <strong>China</strong> (<b>2nd century B.C.</b>) and its
+                  spread to other regions revolutionized calligraphy, making
+                  writing more accessible and fostering its wider
+                  development.</li>
+                <br>
+                <li class="para-li">In Europe, medieval scribes produced
+                  illuminated manuscripts with ornate calligraphy and decorative
+                  elements.</li>
+                <br>
+                <li class="para-li">The invention of the printing press in the
+                  <b>15th century</b> initially challenged the role of
+                  calligraphy, but it continued to thrive as an art form.</li>
+              </ul>
+
+              <span class="para-span">Modern Calligraphy</span>
+              <ul>
+                <li class="para-li"><b>Today</b>, calligraphy enjoys renewed
+                  interest as a creative expression and artistic practice.</li>
+                <br>
+                <li class="para-li"><strong>Modern</strong> calligraphers draw
+                  inspiration from various traditions and experiment with new
+                  tools and techniques to create a diverse range of styles.</li>
+                <br>
+              </ul>
+            </p>
+          </div>
+          <br><br>
+          <span class="span2">X-X-X</span>
+        </div>
+
+        <!-- This is for the Feedback form container -->
+        <span id="feedback0"></span>
+        <br>
+        <br>
+        <div id="cd2"
+          class="w-100 border-top container-fluid pe-3 d-flex flex-column align-items-center my-4"
+          style="height: max-content;">
+          <div id="form-container" class="form-container my-5">
+            <h1 class=".h1 border-top-0">Leave us a Feedback</h1>
+            <form>
+              <span id="form-alert"
+                style="color: rgb(255, 0, 0); font-family: 'Lato'"
+                class="d-none">You must fill up the necessary (*) input
+                fields</span>
+              <div class="form-group">
+                <label for="name">Your Name*</label>
+                <input id="form-name-input" type="text" class="form-control"
+                  placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email*</label>
+                <input id="form-email-input" type="email" class="form-control"
+                  placeholder="Enter your email">
+              </div>
+              <div class="form-group">
+                <label for>Sections you are referring to</label>
+                <br>
+                <ul class="checkbox-ul">
+                  <li><input class="m-0 h-100" type="checkbox"> Learning
+                    Section</li>
+                  <li><input class="m-0 h-100" type="checkbox"> Store
+                    Section</li>
+                  <li><input class="m-0 h-100" type="checkbox"> History/Overview
+                    Section</li>
+                  <li><input class="m-0 h-100" type="checkbox"> Talking
+                    Overall</li>
+                </ul>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id rows="3"></textarea>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <button class="w-100" type="submit" id="submit-btn"
+                  onclick="FeedbackSubmit()"><a class=" color-white"
+                    href="#feedback0">Submit</a></button>
+              </div>
+            </form>
+          </div>
+
+          <div id="feedback-submit-container"
+            class="flex-column form-container my-5 py-4 d-none">
+            <h1 class="h1">Thank You For The Feedback!</h1>
+            <span>Your feedback has been successfully submitted. We appreciate
+              your feedbacks, and try to improve upon it and get motivated by
+              it.</span>
+            <div class="d-flex justify-content-between">
+              <span class="email-chosen span4"><span>by</span> email</span>
+              <span id="section-chosen" class="span4"></span>
+              <span id="date-submitted" class=" span4">date</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-------------------- Now starts the F O O T E R ----------------------------------------------------------------------->
+
+    <footer class="bg-grey-gradient z-3 position-sticky">
+      <div class="container-fluid px-4 py-4 ">
+        <!-- This is the row which contains the columns --------------------------------------------------------------------->
+        <div class="row row-cols-md">
+
+          <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-sm-1">
+
+            <div
+              class="py-sm-3 mb-4 my-sm-0 align-items-center d-flex flex-column d-sm-block">
+              <div class="logo-container d-flex align-items-center">
+                <img id="logo" src="./Assets/Images/logo.png" alt>
+                <span class="logo-span-1">uick <br><span
+                    class="logo-span-2">Calligraphy</span></span>
+              </div>
+              <span class="footer-text">We put the 'you' in 'unique</span>
+            </div>
+
+            <div
+              class="d-block w-100 justify-content-evenly d-sm-flex d-md-block">
+              <a class="footer-text me-1"><i class="bi bi-map-fill"></i> Karachi
+                City, Pakistan</a>
+              <br>
+              <a class="footer-text me-1"><i class="bi bi-phone-fill"></i> +92
+                313 282 6142</a>
+              <br>
+              <a class="footer-text me-1 text-break"><i
+                  class="bi bi-envelope-fill"></i>
+                customer@quickcallygraphy.com</a>
+            </div>
+
+          </div>
+
+          <div class="col-6 col-sm-3 footer-tab-width">
+            <span class="footer-h1">Our Catagories</span>
+            <br>
+            <span class="footer-h2">Calligraphy By Difficulties</span>
+            <ul>
+              <li class="footer-text">For Beginners</li>
+              <li class="footer-text">Amateur</li>
+              <li class="footer-text">Complex</li>
+              <li class="footer-text">Advanced</li>
+            </ul>
+            <span class="footer-h2">Calligraphy By Languages</span>
+            <ul>
+              <li class="footer-text">Urdu</li>
+              <li class="footer-text">Arabic</li>
+              <li class="footer-text">Greek</li>
+              <li class="footer-text">Indic</li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm-3 col-md-3 footer-tab-width">
+            <span class="footer-h1 mb-2">Our Links</span>
+
+            <div class="ps-2 d-flex flex-column p-4 p-md-1"
+              style="gap: 0.94rem;">
+              <a class="footer-h2 my-1">Artistic Guides</a>
+              <a class="footer-h2">Privacy Policy</a>
+              <a class="footer-h2">Returns</a>
+              <a class="footer-h2">Order Tracking</a>
+              <a class="footer-h2">Contact Us</a>
+              <a class="footer-h2">Our Sitemap</a>
+
+            </div>
+          </div>
+
+          <div class="col-10 col-sm col-md">
+            <span class="footer-h1">NEWSLETTER</span>
+            <br>
+            <input class="w-100" type="text" name="email"
+              placeholder="Enter your Email Here">
+            <button class="bi-envelope-fill" onclick="SignUpContact()"> ‎ SIGN
+              UP</button>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!------------------------------------------------  S C R I P T -------------------------------------------------->
+    <script>
+      // Activate anchors according to scroll positions
+      const cd1 = document.getElementById("cd1")
+      const cd2 = document.getElementById("cd2")
+      
+      const sa1 = document.getElementById("sa1")
+      const sa2 = document.getElementById("sa2")
+      
+      window.addEventListener('scroll' , () => {
+          let rect1 = cd1.getBoundingClientRect()
+          let rect2 = cd2.getBoundingClientRect()
+      
+          if (rect1.top <= 120) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa1.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa1.classList.add("activee")
+              }
+          }
+          if (rect2.top <= 120) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa2.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa2.classList.add("activee")
+              }
+          }
+      })
+    </script>
+    <script src="/Scripts/main.js"></script>
+  </body>
+</html>

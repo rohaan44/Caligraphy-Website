@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Calligraphy</title>
+    <!-- Links to online means -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&family=Lato&family=Dancing+Script&family=Protest+Revolution&family=Protest+Riot&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet">
+
+    <!-- Local files are linked below: -->
+    <link rel="stylesheet" href="./Style/home.css" />
+    <link rel="stylesheet" href="./Style/base.css" />
+    <link rel="stylesheet" href="./Style/shop.css" />
+    <script src="/Scripts/jquery.js"></script>
+  </head>
+  <body>
+    <header>
+
+      <!-- This is the main Nav Bar div which contains ul > li > anchor elements -------------------------------------------->
+      <div
+        class="navbar navbar-expand-md justify-content-between bg-grey-gradient px-2 px-md-3">
+
+        <!-- This is the container which consists of the logo, and the two other divs containing links ---------------------->
+        <div class="container-fluid nav-container">
+
+          <div class="logo-container d-flex align-items-center">
+            <img id="logo" src="./Assets/Images/logo.png" alt>
+            <span class="logo-span-1">uick <br><span class="logo-span-2">‎
+                Calligraphy</span></span>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerD" aria-controls="navbarTogglerDemo01"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-list"></span>
+          </button>
+
+          <div class="nav" style="width: 63%;">
+            <div class="nav collapse navbar-collapse justify-content-between"
+              id="navbarTogglerD">
+              <ul class="nav align-items-center w-50">
+                <li class="nav-item">
+                  <a onclick="NavLinkClick()" class="nav-link rubik"
+                    id="home-link" aria-current="page"
+                    href="/index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a onclick="NavLinkClick()" class="nav-link tab-anchors"
+                    aria-current="page" href="learning.html">Learn</a>
+                </li>
+
+                <li class="nav-item">
+                  <a onclick="NavLinkClick()" class="nav-link activee"
+                    id="nav-shop-link" aria-current="page" href="#">Store</a>
+                </li>
+                <li class="nav-item">
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page"
+                    href="index.html#aboutus1">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Contact
+                    Us</a>
+                </li>
+
+              </ul>
+
+              <ul class="nav align-items-center">
+
+                <li class="nav-item">
+                  <a id="login-reg" class="nav-link" aria-current="page"
+                    href="authentication.html">Login/Register</a>
+                </li>
+
+                <!-- Search Bar Div ------------------------------------------------------------------------->
+                <div id="SearchBarDiv"
+                  class="d-flex align-items-center d-none position-relative">
+                  <input type="text" id="search-input" name="search"
+                    placeholder="Search Around Here"
+                    style="margin-right: 0.4rem;">
+                  <button class="bi bi-search"
+                    onclick="SearchContent()"></button>
+                </div>
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#xyz"
+                    onclick="TriggerSearchBar()"><i class=" bi bi-search"
+                      id="search-btn"></i></a>
+                </li>
+
+                <!-- Modal and the cart icon -->
+                <li class="nav-item">
+                  <a class="nav-link" id="nav-cart-trigger" href="#xyz"
+                    aria-current="page"
+                    data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="bi bi-cart3"></i>
+                    <div id="cart-bubble" class="d-none"></div>
+                  </a>
+                </li>
+
+                <div class="modal fade my-5" id="cartModal" tabindex="-1"
+                  aria-labelledby="cartModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg"> <div
+                      class="modal-content">
+                      <div class="modal-header">
+                        <span class="modal-title" id="cartModalLabel">Cart
+                          Details</span>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <ol id="cart-items">
+                          <span id="cart-empty-span"
+                            class="bi-info-circle span4"> Items you add to your
+                            cart show up here</span>
+                        </ol>
+                      </div>
+                      <div class="modal-footer">
+                        <button onclick="RemoveFromCart()"
+                          id="cart-item-removal-btn" class="d-none"> Remove Last
+                          Item</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+
+    <!--------------------------------------------------------------------------------------------------------------------->
+
+    <div id="central-container"
+      class="row w-100 container-fluid central-container py-5 bg-container parent-container">
+
+      <!-- This is the div which contains the filters, catagories and other things... ------------------------------------->
+      <div
+        class=" d-flex px-2 col-2 col-sm-1 flex-column bg-filters h-100 py-5 ps-1 ps-md-3 gap-4 position-sticky"
+        id="side-tabs">
+
+        <a id="side-tabs-toggler" class="bi-list my-2 ms-3" href="####"></a>
+
+        <div class="ps-0 gap-2 d-flex flex-column border-bottom py-0 py-sm-4">
+          <span class="p-shop filter-span"
+            style="color: rgb(116, 116, 116); cursor:default">
+
+            <span class=" fe-shop mb-4-sm-0 pt-2  fw-bold"
+              style="color: rgb(116, 116, 116); cursor:default">Store</span></span>
+
+          <li class="nav-item filters-li">
+            <a id="sa1" class="topp filterElements px-3 py-1 rubik"
+              onclick="NavLinkClick()" href="/shop.html#top0">Top Items</a>
+          </li>
+
+          <li class=" arabic nav-item filters-li">
+            <a id="sa2" class=" arabicc px-3 py-1 filterElements rubik"
+              href="#arabic0"
+              onclick="NavLinkClick()">Arabic</a>
+          </li>
+
+          <li class="nav-item filters-li">
+            <a id="sa3" class=" greekk px-3 py-1 filterElements rubik"
+              href="#greek1"
+              onclick="NavLinkClick()">Greek</a>
+          </li>
+
+          <li class="nav-item filters-li">
+            <a id="sa4" class="indicc px-3 py-1 filterElements rubik"
+              href="#indic2"
+              onclick="NavLinkClick()">Indic</a>
+          </li>
+
+          <li class="nav-item filters-li">
+            <a id="sa5" class="islamicc px-3 py-1 filterElements rubik"
+              href="#islamic3"
+              onclick="NavLinkClick()">Islamic</a>
+          </li>
+
+          <li class="nav-item filters-li">
+            <a id="sa6" class="latinn px-3 py-1 filterElements rubik"
+              href="#latin4"
+              onclick="NavLinkClick()">Latin</a>
+          </li>
+
+          <li class="nav-item filters-li">
+            <a id="sa7" class="mongoo px-3 py-1 filterElements rubik"
+              href="#mongo5"
+              onclick="NavLinkClick()">Mongolian</a>
+          </li>
+
+          <li class="nav-item filters-li">
+            <a id="sa8" class="orientall px-3 py-1 filterElements rubik"
+              href="#oriental6" onclick="NavLinkClick()">Oriental</a>
+          </li>
+
+          <li class="nav-item filters-li">
+            <a id="sa9" class="urduu px-3 py-1 filterElements rubik"
+              href="#urdu7"
+              onclick="NavLinkClick()">Urdu</a>
+          </li>
+
+        </div>
+
+        <li class="nav-item filters-li">
+          <a class="filterElements px-2 py-1 fe-overview rubik"
+            href="index.html#overview1" onclick="NavLinkClick()">Overview <i
+              class="bi bi-box-arrow-up-right"></i></a>
+        </li>
+
+        <li class="nav-item filters-li">
+          <a class="filterElements px-2 py-1 fe-learn rubik"
+            href="index.html#guide1" onclick="NavLinkClick()">Learn <i
+              class="bi bi-box-arrow-up-right"></i></a>
+        </li>
+
+        <li class="nav-item filters-li">
+          <a class="filterElements px-2 py-1 fe-feedback rubik"
+            href="/index.html#feedback0" onclick="NavLinkClick()">Feedback <i
+              class="bi bi-box-arrow-up-right"></i></a>
+        </li>
+
+      </div>
+
+      <!-- Below is the Hero Section which contains all the Content ------------------------------------------------>
+    </section>
+    <section class="HeroSection w-100 py-5 col bg-white" id="HeroSection">
+
+      <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+      <div class=" d-flex align-items-center">
+        <h1 class=" mb-5 w-100 text-center">Shop <i class="bi-bag"></i></h1>
+      </div>
+      <!--                                       carousel section starts here                                     -->
+
+      <div id="carouselExampleIndicators" class="carousel slide mt-1"
+        data-ride="carousel">
+        <div class="carousel-indicators">
+          <button class="active c-ind" type="button"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button class="c-ind" type="button"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button class="c-ind" type="button"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner w-100">
+
+          <div class="carousel-item active w-100 h-100 pt-5">
+
+            <div
+              class="cards-div d-flex justify-content-center align-content-center gap-4">
+              <div onclick="NavLinkClick('islamic')" class="card"
+                style="width: 17rem;">
+                <div class=" overflow-hidden">
+                  <img
+                    src="/Assets/Images/shop images/islamic calligraphy/i10.webp"
+                    height="230px" class="card-img-top" alt="...">
+                </div>
+
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <h4>ISLAMIC CALLIGRAPHY</h4>
+                    <p class="text-center">UPTO <b>50%</b> OFF</p>
+                  </p>
+                </div>
+              </div>
+
+              <div onclick="NavLinkClick('mangolian')" class="card"
+                style="width: 17rem; ">
+                <div class=" overflow-hidden">
+                  <img
+                    src="/Assets/Images/shop images/mongolian caligraphy/m9.png"
+                    height="230px" class="card-img-top" alt="...">
+                </div>
+
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <h4>MONGOLIAN CALLIGRAPHY</h4>
+                    <p class="text-center">UPTO <b>40%</b> OFF</p>
+                  </p>
+                </div>
+              </div>
+
+              <div onclick="NavLinkClick('oriental')" class="card"
+                style="width: 17rem;">
+                <div class=" overflow-hidden">
+                  <img
+                    src="/Assets/Images/shop images/oriental calligraphy/c9.webp"
+                    height="230px" class="card-img-top" alt="...">
+                </div>
+
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <h4>ORIENTAL CALLIGRAPHY</h4>
+                    <p class="text-center">UPTO <b>30%</b> OFF</p>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- carousel item 2 -->
+          <div class="carousel-item h-100">
+
+            <div class="cards-div d-flex justify-content-center gap-4 my-4">
+
+              <div onclick="NavLinkClick('latin')" class="card"
+                style="width: 15rem;">
+                <div class=" overflow-hidden">
+                </div>
+                <img src="/Assets/Images/shop images/latin calligraphy/l6.jpg"
+                  height="230px" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <h4>LATIN CALLIGRAPHY</h4>
+                    <p class="text-center">UPTO <b>50%</b> OFF</p>
+                  </p>
+                </div>
+              </div>
+
+              <div onclick="NavLinkClick('oriental')" class="card"
+                style="width: 15rem; ">
+                <div class=" overflow-hidden">
+                </div>
+                <img
+                  src="/Assets/Images/shop images/oriental calligraphy/c6.jpg"
+                  height="230px" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <h4>ORIENTAL CALLIGRAPHY</h4>
+                    <p class="text-center">UPTO <b>40%</b> OFF</p>
+                  </p>
+                </div>
+              </div>
+
+              <div onclick="NavLinkClick('indic')" class="card"
+                style="width: 15rem;">
+                <div class=" overflow-hidden">
+                </div>
+                <img src="/Assets/Images/shop images/indic calligraphy/d7.jpg"
+                  height="230px" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <h4>INDIC CALLIGRAPHY</h4>
+                    <p class="text-center">UPTO <b>30%</b> OFF</p>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- carousel item 3 -->
+          <div class="carousel-item h-100">
+
+            <div class="cards-div d-flex justify-content-center gap-4 my-4">
+
+              <div class="card" style="width: 15rem;">
+                <img src="/Assets/Images/shop images/greek calligraphy/g6.webp"
+                  height="230px" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <h4>GREEK CALLIGRAPHY</h4>
+                    <p class="text-center">UPTO <b>50%</b> OFF</p>
+                  </p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 15rem; ">
+                <img src="/Assets/Images/shop images/urdu calligraphy/u9.jpg"
+                  height="230px" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <h4>URDU CALLIGRAPHY</h4>
+                    <p class="text-center">UPTO <b>40%</b> OFF</p>
+                  </p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 15rem;">
+                <img src="/Assets/Images/shop images/arabic calligraphy/a4.jpeg"
+                  height="230px" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-center">
+                    <h4>ARABIC CALLIGRAPHY</h4>
+                    <p class="text-center">UPTO <b>30%</b> OFF</p>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- HERE ARE THE RANDOM ITEMS SHOP ------------------------------------------------------- -->
+      <div id="cd1"></div>
+      <span id="top0"></span>
+      <br><br>
+      <div
+        class="header d-flex justify-content-between align-items-center pt-5 mx-3">
+        <div style="width: max-content;">
+          <h1 class="h1">Have a Look at top user picks!</h1>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <div>
+            <div id="filter-popup" class="popup-inactive" hidden>
+              <span>Types</span>
+              <div class=" d-flex justify-content-around popup-child">
+                <span class="span-filter" href="#trad">Traditional</span>
+                <span class="span-filter" href="#modrn">Modern</span>
+                <span class="span-filter" href="#compl">Complex</span>
+                <span class="span-filter" href="#simp">Simple</span>
+              </div>
+              <div>Languages</div>
+              <div
+                class=" d-flex justify-content-center w-100 popup-child mt-2">
+                <a class="span-filter" href="#urdu7">Urdu</a>
+                <a class="span-filter" href="#arabic0">Arabic</a>
+                <a class="span-filter" href="#greek1">Greek</a>
+                <a class="span-filter" href="#indic2">Indic</a>
+                <a class="span-filter" href="#mongo5">Mangolian</a>
+                <a class="span-filter" href="#oriental6">Oriental</a>
+                <a class="span-filter" href="#latin4">Latin</a>
+              </div>
+
+            </div>
+          </div>
+          <a onclick="FilterPopups()"
+            class="bi bi-filter d-flex flex-column align-items-center"
+            href="#random-items"></a>
+        </div>
+      </div>
+      <div class="container-fluid">
+
+      </div>
+      <div class="container-fluid w-100 my-5">
+        <div class="row justify-content-center gap-4">
+
+          <div class="col-12 col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a1.jpeg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">5000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn"><a href>Buy Now</a></button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a1.html"></a>
+                  <a onclick="AddToCart()" class=" bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type 1"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a4.jpeg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/urdu calligraphy/u1.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">2000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g3.webp"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 3</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">6000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g3.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 3"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/mongolian caligraphy/m1.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">mongolian calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">2000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 1"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-sm">
+            <div class="card" style="width: 17rem;">
+              <div>
+                <div class=" overflow-hidden"><img id="card-img"
+                    src="/Assets/Images/shop images/islamic calligraphy/i4.webp"
+                    height="250px" class="card-img-top" alt="..."></div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/indic calligraphy/d2.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/latin calligraphy/l2.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/oriental calligraphy/c2.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/latin calligraphy/l4.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/indic calligraphy/d5.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 5</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">9000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i5.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 5"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm">
+            <div class="card" style="width: 17rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/urdu calligraphy/u6.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 6</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">1000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u6.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 6"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ARABIC CALLIGRAPHY STARTS HERE ----------------------------------------- -->
+      <span id="arabic0"></span>
+      <br>
+      <div id="cd2" class="container">
+        <h1 class="shop-title">Shop/Arabic Calligraphy</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class=" col-12 col">
+            <div class="card" style="width: 18rem;">
+              <div class=" overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a1.jpeg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">5000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type "></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 col">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a2.png"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">7000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=" col-12 ">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a3.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 3</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a3.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type 3"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-12">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a4.jpeg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a5.webp"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 5</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">2000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a5.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type 5"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 ">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a6.jpeg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 6</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">4000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a6.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type 6"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a7.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 7</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">9000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a7.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type 7"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 ">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a8.webp"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 8</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">10000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a8.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type 8"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/arabic calligraphy/a9.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">Arabic calligraphy type 9</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">6000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/arabic calligraphy/a9.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Arabic Calligraphy Type 9"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERE IS GREEK CALLIGRAPHY -->
+      <br>
+      <span id="greek1"></span>
+      <div id="cd3" class="container">
+        <h1 class="shop-title">Shop/Greek Calligraphy</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g1.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">2000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 1"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g2.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g3.webp"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 3</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">6000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g3.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 3"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g4.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g5.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 5</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">9000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g5.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 5"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g6.webp"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 6</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">1000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g6.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 6"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g7.jpeg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 7</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">5000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g7.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 7"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g8.webp"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 8</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g8.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 8"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/greek calligraphy/g9.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">GREEK calligraphy type 9</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">50000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/greek calligraphy/g7.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Greek Calligraphy Type 9"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERE IS INDIC CALLIGRAPHY ------------------------------------------------------- -->
+      <!-- ----------------------------------------------------------------------- -->
+      <span id="indic2"></span>
+      <br>
+      <div id="cd4" class="container">
+        <h1 class="shop-title">Shop/Indic Calligraphy</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/indic calligraphy/d1.jpeg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">2000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 1"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/indic calligraphy/d2.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/indic calligraphy/d3.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 3</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">6000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i3.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 3"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/indic calligraphy/d4.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/indic calligraphy/d5.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 5</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">9000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i5.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 5"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/indic calligraphy/d6.jpeg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 6</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">1000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i6.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 6"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/indic calligraphy/d7.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 7</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">5000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i7.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 7"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/indic calligraphy/d8.webp"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 8</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i8.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 8"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/indic calligraphy/d9.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">INDIC calligraphy type 9</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">50000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/indic calligraphy/i9.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Indic Calligraphy Type 9"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERE IS ISLAMIC CALLIGRAPHY -------------------------------------------------- -->
+      <br>
+      <span id="islamic3"></span>
+      <div id="cd5" class="container">
+        <h1 class="shop-title">Shop/Islamic Calligraphy</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/islamic calligraphy/i1.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">2000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 1"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/islamic calligraphy/i2.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/islamic calligraphy/i3.avif"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 3</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">6000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d3.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 3"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/islamic calligraphy/i4.webp"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/islamic calligraphy/i5.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 5</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">9000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d5.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 5"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/islamic calligraphy/i6.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 6</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">1000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d6.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 6"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/islamic calligraphy/i7.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 7</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">5000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d7.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 7"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/islamic calligraphy/i8.jpg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 8</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d8.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 8"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <div class="overflow-hidden"><img id="card-img"
+                  src="/Assets/Images/shop images/islamic calligraphy/i9.jpeg"
+                  height="250px" class="card-img-top" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title">ISLAMIC calligraphy type 9</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">50000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/islamic calligraphy/d9.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Islamic Calligraphy Type 9"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERE IS LATIN CALLIGRAPHY -------------------------------------------------- -->
+      <span id="latin4"></span>
+      <br>
+      <div id="cd6" class="container">
+        <h1 class="shop-title">Shop / Latin Calligraphy</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/latin calligraphy/l1.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">2000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 1"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/latin calligraphy/l2.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/latin calligraphy/l3.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 3</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">6000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l3.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 3"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/latin calligraphy/l4.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/latin calligraphy/l5.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 5</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">9000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l5.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 5"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/latin calligraphy/l6.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 6</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">1000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l6.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 6"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/latin calligraphy/l7.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 7</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">5000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l7.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 7"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/latin calligraphy/l8.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 8</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l8.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 8"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/latin calligraphy/l9.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LATIN calligraphy type 9</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">50000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/latin calligraphy/l9.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Latin Calligraphy Type 9"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERE IS MONGOLIAN CALLIGRPAHY --------------------------------------- -->
+      <span id="mongo5"></span>
+      <br>
+      <div id="cd7" class="container">
+        <h1 class="shop-title">Shop/Mangolian Calligraphy</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/mongolian caligraphy/m1.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">mongolian calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">2000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 1"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/mongolian caligraphy/m2.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">mongolian calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/mongolian caligraphy/m3.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">mongolian calligraphy type 3</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">6000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m3.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 3"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/mongolian caligraphy/m4.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">mongolian calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/mongolian caligraphy/m5.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">mongolian calligraphy type 5</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">9000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m5.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 5"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/mongolian caligraphy/m6.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">mongolian calligraphy type 6</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">1000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m6.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 6"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/mongolian caligraphy/m7.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">mongolian calligraphy type 7</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">5000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m7.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 7"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/mongolian caligraphy/m8.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">mongolian calligraphy type 8</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m8.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 8"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/mongolian caligraphy/m9.png"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">MONGOLIAN calligraphy type 9</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">50000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/mongolian calligraphy/m9.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Mangolian Calligraphy Type 9"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERE STARTS THE ORIENTAL CALLIGRAPHY -->
+      <span id="oriental6"></span>
+      <br>
+      <div id="cd8" class="container">
+        <h1 class="shop-title">Shop/Oriental Calligraphy</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/oriental calligraphy/c1.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">2000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 1"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/oriental calligraphy/c2.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/oriental calligraphy/c3.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 3</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">6000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o3.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 3"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/oriental calligraphy/c4.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/oriental calligraphy/c5.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 5</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">9000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o5.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 5"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/oriental calligraphy/c6.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 6</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">1000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o6.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 6"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/oriental calligraphy/c7.avif"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 7</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">5000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o7.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 7"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/oriental calligraphy/c8.webp"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 8</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o8.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 8"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/oriental calligraphy/c9.webp"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">oriental calligraphy type 9</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">50000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/oriential.calligraphy/o9.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Oriental Calligraphy Type 9"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERE STARTS THE URDU CALLIGRAPHY --------------------------------------------------- -->
+      <span id="urdu7"></span>
+      <br>
+      <div id="cd9" class="container">
+        <h1 class="shop-title">Shop/Urdu Calligraphy</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/urdu calligraphy/u1.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 1</h5>
+                <p class="card-text"> <h6 style="color: burlywood;">PRICE :
+                    <span style="color: black;">2000PKR</span></h6> </p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u1.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 1"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/urdu calligraphy/u2.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 2</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u2.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 2"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/urdu calligraphy/u3.jpeg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 3</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">6000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u3.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 3"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/urdu calligraphy/u4.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 4</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">8000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u4.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 4"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/urdu calligraphy/u5.png"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 5</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">9000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u5.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 5"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/urdu calligraphy/u6.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 6</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">1000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u6.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 6"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/urdu calligraphy/u7.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 7</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">5000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u7.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 7"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/urdu calligraphy/u8.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 8</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">3000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u8.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 8"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+              <img id="card-img"
+                src="/Assets/Images/shop images/urdu calligraphy/u9.jpg"
+                height="250px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">urdu calligraphy type 9</h5>
+                <p class="card-text"><h6 style="color: burlywood;">PRICE : <span
+                      style="color: black;">50000PKR</span></h6></p>
+                <div class="d-flex justify-content-between">
+
+                  <button class="buy-now-btn">Buy Now</button>
+                  <a class="bi bi-info product-info-btn"
+                    href="/Assets/add to cart/urdu caliigraphy/u9.html"></a>
+                  <a onclick="AddToCart()" class="bi bi-cart2 add-to-cart"
+                    href="#Urdu Calligraphy Type 9"></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- central Container ends here -->
+    </div>
+
+    <!-------------------- Now starts the F O O T E R ----------------------------------------------------------------------->
+
+    <footer class="bg-grey-gradient z-3 position-sticky">
+      <div class="container-fluid px-4 py-4 ">
+        <!-- This is the row which contains the columns --------------------------------------------------------------------->
+        <div class="row row-cols-md">
+
+          <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-sm-1">
+
+            <div
+              class="py-sm-3 mb-4 my-sm-0 align-items-center d-flex flex-column d-sm-block">
+              <div class="logo-container d-flex align-items-center">
+                <img id="logo" src="./Assets/Images/logo.png" alt>
+                <span class="logo-span-1">uick <br><span
+                    class="logo-span-2">Calligraphy</span></span>
+              </div>
+              <span class="footer-text">We put the 'you' in 'unique</span>
+            </div>
+
+            <div
+              class="d-block w-100 justify-content-evenly d-sm-flex d-md-block">
+              <a class="footer-text me-1"><i class="bi bi-map-fill"></i> Karachi
+                City, Pakistan</a>
+              <br>
+              <a class="footer-text me-1"><i class="bi bi-phone-fill"></i> +92
+                313 282 6142</a>
+              <br>
+              <a class="footer-text me-1 text-break"><i
+                  class="bi bi-envelope-fill"></i>
+                customer@quickcallygraphy.com</a>
+            </div>
+
+          </div>
+
+          <div class="col-6 col-sm-3 footer-tab-width">
+            <span class="footer-h1">Our Catagories</span>
+            <br>
+            <span class="footer-h2">Calligraphy By Difficulties</span>
+            <ul>
+              <li class="footer-text"><a class="footer-text"
+                  href="learning.html">For Beginners</a></li>
+              <li class="footer-text">Amateur</li>
+              <li class="footer-text">Complex</li>
+              <li class="footer-text">Advanced</li>
+            </ul>
+            <span class="footer-h2">Calligraphy By Languages</span>
+            <ul>
+              <li class="footer-text">Urdu</li>
+              <li class="footer-text">Arabic</li>
+              <li class="footer-text">Greek</li>
+              <li class="footer-text">Indic</li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm-3 col-md-3 footer-tab-width">
+            <span class="footer-h1 mb-2">Our Links</span>
+
+            <div class="ps-2 d-flex flex-column p-4 p-md-1"
+              style="gap: 0.94rem;">
+              <a class="footer-h2 my-1">Artistic Guides</a>
+              <a class="footer-h2">Privacy Policy</a>
+              <a class="footer-h2">Returns</a>
+              <a class="footer-h2">Order Tracking</a>
+              <a class="footer-h2">Contact Us</a>
+              <a class="footer-h2">Our Sitemap</a>
+
+            </div>
+          </div>
+
+          <div class="col-10 col-sm col-md">
+            <span class="footer-h1">NEWSLETTER</span>
+            <br>
+            <input class="w-100" type="text" name="email"
+              placeholder="Enter your Email Here">
+            <button class="bi-envelope-fill" onclick="SignUpContact()"> ‎ SIGN
+              UP</button>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!----------------------------------------------- A R A B I C ---------------------------------------------------->
+    <script>
+      // Activate anchors according to scroll positions
+      const cd1 = document.getElementById("cd1")
+      const cd2 = document.getElementById("cd2")
+      const cd3 = document.getElementById("cd3")
+      const cd4 = document.getElementById("cd4")
+      const cd5 = document.getElementById("cd5")
+      const cd6 = document.getElementById("cd6")
+      const cd7 = document.getElementById("cd7")
+      const cd8 = document.getElementById("cd8")
+      const cd9 = document.getElementById("cd9")
+      
+      const sa1 = document.getElementById("sa1")
+      const sa2 = document.getElementById("sa2")
+      const sa3 = document.getElementById("sa3")
+      const sa4 = document.getElementById("sa4")
+      const sa5 = document.getElementById("sa5")
+      const sa6 = document.getElementById("sa6")
+      const sa7 = document.getElementById("sa7")
+      const sa8 = document.getElementById("sa8")
+      const sa9 = document.getElementById("sa9")
+      
+      window.addEventListener('scroll' , () => {
+          let rect1 = cd1.getBoundingClientRect()
+          let rect2 = cd2.getBoundingClientRect()
+          let rect3 = cd3.getBoundingClientRect()
+          let rect4 = cd4.getBoundingClientRect()
+          let rect5 = cd5.getBoundingClientRect()
+          let rect6 = cd6.getBoundingClientRect()
+          let rect7 = cd7.getBoundingClientRect()
+          let rect8 = cd8.getBoundingClientRect()
+          let rect9 = cd9.getBoundingClientRect()
+      
+          if (rect1.top <= 8) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa1.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa1.classList.add("activee")
+              }
+          }
+      
+          if (rect2.top <= 8) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa2.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa2.classList.add("activee")
+              }
+          }
+      
+          if (rect3.top <= 100) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa3.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa3.classList.add("activee")
+              }
+          }
+      
+          if (rect4.top <= 150) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa4.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa4.classList.add("activee")
+              }
+          }
+          if (rect5.top <= 150) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa5.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa5.classList.add("activee")
+              }
+          }
+          if (rect6.top <= 150) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa6.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa6.classList.add("activee")
+              }
+          }
+          if (rect7.top <= 150) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa7.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa7.classList.add("activee")
+              }
+          }
+          if (rect8.top <= 150) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa8.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa8.classList.add("activee")
+              }
+          }
+          if (rect9.top <= 100) {
+              if ($(".filterElements").hasClass("activee"))  {
+                  $(".filterElements").removeClass("activee")
+                  sa9.classList.add("activee")
+              }
+      
+              if (!$(".filterElements").hasClass("inactivee")) {
+                  $(".filterElements").addClass("inactivee")
+                  sa9.classList.add("activee")
+              }
+          }
+      })
+    </script>
+    <script src="./Scripts/main.js"></script>
+    <script src="./Scripts/shop.js"></script>
+  </body>
+</html>

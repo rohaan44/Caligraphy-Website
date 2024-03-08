@@ -1,0 +1,923 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Dancing+Script&family=Lato&family=Protest+Revolution&family=Protest+Riot&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.anta {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+    transition: all 0.1s ease-in-out;
+}
+
+.h1 {
+    color: rgb(159, 130, 0);
+    font-family: "Dancing Script";
+    border-top: none !important;
+    border-bottom: none !important;
+    font-size: 3.5rem !important;
+    padding: 0 !important;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 0 !important;
+}
+
+.img1 {
+    align-self: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width:60%;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.img2 {
+    width: 3rem;
+}
+
+.align-center {
+    align-self: center;
+}
+
+.img1:hover {
+    border: 1px solid rgb(218, 218, 218);
+}
+
+.span-color1 {
+    color: rgb(131, 109, 13)
+}
+
+
+.filterElements:hover {
+    background: rgba(192, 192, 192, 0.194);
+    color: gray;
+    border-radius: 1rem;
+}
+
+div {
+    display: block;
+    -moz-height: max-content;
+    height: max-content;
+}
+.hover-border {
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+}
+.hover-border:hover {
+    border: 1px gray solid;
+}
+
+
+.nav-link {
+    transition: all 0.5s cubic-bezier(0, 0.38, 0.12, 1.01) !important;
+}
+.nav-link:hover {
+    border-radius: 2rem;
+    background-color: rgba(199, 199, 199, 0.267);
+}
+
+.para-div {
+    text-align: justify;
+}
+
+.shop-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Dancing Script';
+
+}
+
+.bi-filter {
+    font-size: 2rem;
+    color: rgb(196, 196, 196);
+    transition: all 0.2s ease-in-out;
+    padding: 1rem;
+    border-radius: 100%;
+}
+.bi-filter:hover {
+    background: rgba(229, 229, 229, 0.27);
+}
+
+
+/* This area is for filter popup------------------ */
+
+#filter-popup {
+    transform: translateX(-80%)  translateY(10%);
+    position:absolute;
+    background-color: white;
+    width: 25rem;
+    z-index: 4;
+    padding: 0.5rem 2rem 0.5rem;
+    transition: all 0.2s forwards ease-in-out;
+    box-shadow: 2px 0px 20px rgba(140, 140, 140, 0.461);
+}
+
+.popup-child {
+    flex-wrap: wrap;
+    flex-shrink: 50%;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed lightgray;
+}
+
+.span-filter {
+    color: rgb(67, 60, 74);
+    transition: all 0.2s ease-in-out;
+    text-wrap: nowrap;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 0.8rem;
+    border-radius: 2rem;
+}
+.span-filter:hover {
+    background-color: rgba(225, 225, 225, 0.434);
+}
+
+.popup-active {
+    transition: all 0.2s ease-in-out;
+    opacity: 100%;
+}
+
+
+.popup-inactive {
+    opacity: 0;
+}
+
+#bookmarks-div {
+    display: none;
+    flex-direction: column;
+}
+
+.col, .col-sm, .col-12, .col-lg, .col-md {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+
+a {
+    text-decoration: none !important; 
+    padding-inline-start: 0;
+}
+
+.bg-filters {
+    background: rgb(248, 248, 248);
+}
+
+.bg-grey-gradient {
+    background: rgb(235, 235, 235);
+}
+
+.bg-mobile {
+    background: rgb(235, 235, 235);
+}
+
+.bg-container {
+    background-color: rgb(248, 248, 248);
+}
+
+.color-white {
+    color: white;
+}
+
+
+/* Use this class for the div in which you have to place logo, always remember to make a separate div for the logo */
+.logo-container:hover {
+    .nav-span-1 {
+        color: teal;
+    }
+}
+
+
+
+input {
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 1rem !important;
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    margin: 1.1rem 0 1rem;
+    height: 3rem;
+    transition: all 0.2s ease-in-out;
+}
+input:hover {
+    background-color: rgb(188, 188, 188);
+    border: 1px solid gold;
+}
+
+.buy-now-btn {
+    width: 6rem !important;
+    padding-inline: 0.5rem;
+}
+
+.add-to-cart {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: rgb(159, 130, 0);
+}
+.add-to-cart::before {
+    display: flex;
+    justify-content: center;
+}
+.add-to-cart:hover {
+    border-radius: 100%;
+    background: rgba(210, 210, 210, 0.393);
+}
+
+#cart-bubble {
+    content: "1";
+    padding-inline-start: 0.2rem;
+    color: white;
+    padding-bottom: 0.5rem;
+    border-radius: 100%;
+    width: 1rem !important;
+    height: 1rem;
+    right: 22px;
+    top: 1.5rem;
+    position: absolute;
+    display:flex;
+    background-color: rgb(194, 161, 15);
+}
+
+.cart-li {
+    list-style-position: inside;
+    cursor: pointer;
+    margin: 0.6rem 0 0.5rem;
+    border-bottom: 1px solid lightgray;
+}
+
+ol ol:last-child(1) {
+    border-bottom: black !important;
+}
+
+.product-info-btn {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: rgb(159, 130, 0);
+}
+.product-info-btn::before {
+    display: flex;
+    justify-content: center;
+}
+.product-info-btn:hover {
+    border-radius: 100%;
+    background: rgba(210, 210, 210, 0.393);
+}
+
+/* BUTTON ------------------------------------- */
+button {
+    padding: 0.6rem 1.3rem;
+    background: rgb(159, 130, 0);
+    border-radius: 0.5rem;
+    height: 3rem;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
+    font-family: 'Rubik';
+    transition: all 0.4s ease-in-out;
+    filter: drop-shadow(0px 0px 15px rgba(128, 128, 128, 0.434));
+}
+button:hover {
+    background: rgb(218, 169, 25);
+    scale: 90%;
+    color: teal;
+    filter: drop-shadow(0px 0px 5px grey);
+}
+button:active {
+    scale: 80%;
+}
+
+button::before {
+    transition: all 0.4s ease-in-out;
+}
+button:hover::before {
+    scale: 150%;
+    transform: translateX(-20%);
+    color: rgb(0, 107, 128);
+}
+
+.bi-chevron-down {
+    margin-top: 0.2rem;
+    padding-inline: 0.1rem;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    color: rgb(112, 112, 112);
+}
+
+.bi-search, .bi-cart3 {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+b {
+    letter-spacing: 0.01rem;
+    font-weight: 600;
+    color: rgb(6, 92, 92);
+}
+
+.bookmarks-ol {
+    color: rgb(154, 130, 25);
+}
+
+
+p {
+    text-align: justify;
+    padding-inline: 1rem;
+}
+
+strong {
+    color: rgb(138, 103, 6);
+}
+
+.span1 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Lato';
+    color: rgb(138, 103, 6);
+}
+
+.span2 {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.span3 {
+    font-weight: bold;
+    font-family: 'Lato' !important;
+}
+
+.span4 {
+    color: rgb(85, 80, 89);
+    font-size: 1rem;
+}
+
+.span-linkable {
+    font-weight: bold;
+    font-family: 'Lato' !important;
+    color: rgb(154, 130, 25);
+    cursor: pointer;
+}
+.span-linkable:hover {
+    color: goldenrod;
+    text-shadow: gold;
+}
+
+.span-linkable2 {
+    font-family: 'Lato' !important;
+    color: rgb(126, 105, 13);
+    cursor: pointer;
+    padding: 0.2rem;
+    border: 1px dashed transparent;
+}
+.span-linkable2:hover {
+    border: 1px dashed teal;
+    color: rgb(173, 131, 25);
+    text-shadow: rgba(189, 172, 22, 0.544);
+}
+
+
+.col, .col-4 {
+    display: flex !important;
+    flex-direction: column;
+    width: max-content;
+}
+
+.row {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.side-tab-open {
+    width: 20%;
+}
+
+.nav-container {
+    justify-content: space-between !important;
+}
+
+
+/* ---------------------------------------From Feedback Page ----------------------------------------------------------- */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px 36px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px  rgb(159, 130, 0);
+    max-width: 600px;
+}
+
+
+
+
+.form-container2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px 36px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px  rgb(159, 130, 0);
+    max-width: 600px;
+    width: 30em;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color:  rgb(159, 130, 0);
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+    margin-bottom: 20px;
+}
+
+.checkbox-ul {
+    list-style: none;
+    list-style-position: inside;
+    padding: 0.5rem 0.5rem 0.5em;
+    margin-bottom: 0.8rem;
+    color: rgb(92, 92, 92);
+}
+
+label {
+    font-weight: 550;
+    color: rgb(93, 93, 93);
+    font-family: 'Rubik';
+}
+
+/* -------------------------------A  N N I I M M  A T T T  I O O N N --------------------------------------------------- */
+/* ----------------------------- A A N N I I M M A A  T  I I O O N N --------------------------------------------------- */
+
+/* Search bar animation */
+.slide-out {
+    animation: SlideOutFromBehind 0.3s ease-in-out forwards;
+}
+
+@keyframes     SlideOutFromBehind {
+    0% {
+        opacity: 0%;
+        scale: 80%;
+        transform: translateX(30%);
+    }
+    80% {
+        opacity: 100%;
+        scale: 100%;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.slide-in {
+    animation: SlideInBehind 0.3s ease-in-out forwards;
+}
+
+@keyframes     SlideInBehind {
+    From {
+        transform: translateX(0%);
+    }
+    To {
+        scale: 60%;
+        opacity: 0%;
+        transform: translateX(40%);
+    }
+}
+
+/* Section Animations */
+.sectionActive {
+    animation: sectionActive 0.5s forwards ease-in-out;
+}
+
+@keyframes sectionActive {
+    0% {
+        height: 1rem;
+        opacity: 0;
+    }
+    70% {
+        height: 50%;
+        opacity: 100%;
+    }
+    100% {
+        height: 100%;
+    }
+}
+.sectionChange {
+    animation: sectionChange 0.3s forwards ease-in-out;
+}
+
+@keyframes sectionChange {
+    From {
+        opacity: 100%;
+    }
+    To {
+        opacity: 0%;
+    }
+}
+
+/* Make the header sticky upon scrolling */
+.scrolledForHeader {
+    position: sticky;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    animation: scrolledForHeader forwards 0.4s ease-in-out;
+}
+
+@keyframes scrolledForHeader {
+    From {
+        opacity: 0;
+        top: -88.36px;
+    }
+    To {
+        opacity: 100%;
+        top: 0;
+    }
+}
+/* --------------------------------------------------------------------------------------------------------- */
+
+.bi-list {
+    color: black;
+}
+
+#sidebar-toggler {
+    position: absolute;
+    z-index: 4;
+}
+
+.bi-box-arrow-up-right {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(159, 130, 0);
+    font-family: "Dancing Script";
+    font-size: 4rem;
+    border-top: 1px groove rgb(182, 164, 152);
+    border-bottom: 1px solid rgb(235, 225, 219);
+    padding: 1rem 0 1rem;
+    margin-bottom: 0;
+    pointer-events: none;
+    z-index: 0 !important;
+}
+
+#side-tabs {
+    transition: all 0.4s cubic-bezier(0.13, 0.71, 0.51, 0.86);
+}
+
+.filters-li {
+    list-style: none;
+}
+
+.filter-span {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.filterElements {
+    color: #969696;
+    transition: all 0.3s ease-in-out !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: min-content;
+    width: 5rem !important;
+}
+
+/* Para Span can be used to bring the headings in a <p></p> to the uniform color scheme and styling */
+.para-span {
+    font-family: 'Rubik';
+    line-height: 5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.07rem;
+    color: rgb(169, 140, 11);
+
+}
+
+/* Use it to define listing in the paragraphs, for example the use of it in the calligraphy history section */
+.para-li {
+    text-align: justify;
+    list-style:circle;
+    list-style-position: outside;
+    margin-left: 2rem;
+}
+
+select {
+    padding: 1rem;
+    border: none;
+}
+
+/* Use this .active class when you need an element to get activated upon click */
+.activee {
+    
+    text-shadow: 0px 0px 20px rgb(213, 188, 48);
+    color: rgb(188, 158, 58) !important;
+}
+
+.inactivee {
+    scale: 100%;
+    text-shadow: none;
+    color: rgb(133, 133, 133);
+}
+
+::-webkit-scrollbar {
+    background-color: rgb(238, 238, 238);
+}
+
+::-webkit-scrollbar-thumb {
+    
+    background-color: rgb(149, 149, 149);
+    border-radius: 1rem;
+    transition: all 0.4s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(157, 180, 183);
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgb(110, 83, 15);
+}
+
+.modal-backdrop {
+    z-index: 0;
+}
+
+
+/* --------------------------------------------------------------------------- */
+.footer-text {
+    color: rgb(79, 76, 69);
+    font-size: 0.8rem;
+    list-style: circle;
+    word-break: normal;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.footer-text:hover, .footer-h2.hover {
+    color: rgb(172, 123, 0);
+    scale: 110%;
+}
+
+.footer-text-gray {
+    color: rgb(79, 76, 69);
+}
+
+.footer-h1 {
+    line-break:loose;
+    color: rgb(0, 108, 108);
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.footer-h2 {
+    padding-inline: 0.5rem;
+    color: rgb(79, 76, 69);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: default;
+}
+
+.footer-tab-width {
+    width: 15rem;
+}
+
+.w-max {
+    width: max-content;
+}
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 280px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        padding: 0.7rem !important;
+    }
+}
+
+@media screen and (max-width:180px) {
+
+    h1 {
+        font-size: 100%;
+    }
+
+    .para-span {
+        font-size: 0.9rem !important;
+    }
+
+    p, p > *, ul, li {
+        font-size: 0.7rem !important;
+        word-break: break-all !important;
+    }
+
+    .footer-h1 {
+        font-size: 0.7em;
+    }
+    .footer-h2 {
+        font-size: 0.7rem;
+    }
+    .footer-text {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width:486px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+    .para-span {
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    ul {
+        padding-left: 0;
+        font-size: 0.8rem !important;
+    }
+
+    .span4 {
+        font-size: 0.8rem;
+    }
+
+    .span-linkable2, .span-linkable {
+        font-size: 0.7rem !important;
+    }
+
+    .parent-container {
+        padding-inline: 0 !important;
+    }
+
+    .side-tab-open {
+        width: 40%;
+    }
+
+    .filters-w-stable {
+
+        width: 100% !important;
+
+    }
+    .filterElements {
+        font-size: 0.6rem !important;
+        padding-inline-start: 1rem !important;
+        min-width: 3rem !important;
+        max-width: 10rem;
+    }
+    .filter-span {
+        min-width: 3rem;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .filters-li, .filterElements {
+        align-content: center !important;
+    }
+
+    #HeroSection {
+        padding-inline: 0 !important;
+    }
+
+    label {
+        font-size: 0.7rem;
+    }
+
+    input {
+        font-size: 0.6rem !important;
+        height: 2rem !important;
+    }
+    li, li > * {
+        font-size: 0.6rem;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width: 556px) {
+    .nav {
+        display: block;
+    }
+    #bookmarks-div {
+        display: flex !important;
+        padding-inline: 0.3rem;
+        margin-inline: 0.3rem;
+    }
+
+    .central-container {
+        width: 105%;
+    }
+
+    .filterElements {
+        font-size: 0.5rem !important;
+        min-width: 8rem !important;
+        max-width: 10rem;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .filters-w-stable {
+
+        width: 6rem;
+
+    }
+
+    .filters-li {
+        min-width: 3rem;
+        max-width: 9rem;
+        align-content: center !important;
+        text-align: center;
+    }
+
+    .filter-span {
+        font-size: 0.6rem;
+        margin-bottom: 0.4rem !important;
+        width: 90%;
+    }
+    
+    #side-tabs {
+        height: min-content !important;
+        padding: 0 0 0 0 !important;
+        justify-content: center !important;
+    }
+    li {
+        list-style-position: inside;
+    }
+    .h1 {
+        font-size: 2rem !important;
+    }
+    .nav-link {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:556px) {
+    .filters-w-stable {
+
+        width: 8rem !important;
+    
+    }
+    .filters-li {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width:636px) {
+
+    .filterElements {
+        font-size: 0.5rem !important;
+    }
+    
+}
+
+@media screen and (max-width:875px) {
+    
+    .nav-link {
+        font-size: 0.5rem !important;
+    }
+
+}
+
+@media screen and (max-width:1160px) {
+    #side-tabs {
+        padding-left: 0.9rem;
+    }
+    .filterElements {
+        padding-left: 1rem;
+        font-size: 0.7rem;
+    }
+    
+}

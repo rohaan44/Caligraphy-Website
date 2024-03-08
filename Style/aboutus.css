@@ -1,0 +1,91 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f8f9fa;
+}
+
+.container-aboutus {
+    padding: 1rem 0rem 1rem !important;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.img{
+    filter: grayscale(.4);
+    transition: all 1.0s ease-in-out;
+}
+
+.container img:hover{
+    transform: scale(120%);
+    transition: all 1.0s ease-in-out;
+}
+
+.font-weight-light {
+    font-size: 1.6rem;
+    font-weight: 600 !important;
+}
+
+.benefits-container {
+    padding: 50px 0;
+}
+
+.benefits-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.benefits-card {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.benefits-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefits-card h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.benefits-card p {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 486px) {
+    .benefits-card {
+        padding: 20px;
+    }
+
+    .benefits-card h5 {
+        font-size: 1.2rem;
+    }
+
+    .benefits-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 180px) {
+    .benefits-card {
+        padding: 10px;
+    }
+
+    .benefits-card h5 {
+        font-size: 1rem;
+    }
+
+    .benefits-card p {
+        font-size: 0.9rem;
+    }
+}

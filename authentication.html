@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Page - Quick Calligraphy</title>
+
+    <!-- Links to online means --------------------------------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Dancing+Script&family=Lato&family=Protest+Revolution&family=Protest+Riot&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+
+    <!-- Local files are linked below: ------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="./Style/home.css">
+    <link rel="stylesheet" href="./Style/base.css">
+    <link rel="stylesheet" href="./Style/login.css">
+    <script src="./Scripts/jquery.js"></script>
+</head>
+<body>
+    <div class="h-100  container py-5" >
+        <a onclick="goBack()" class="bi-x-lg back-anchor" style="color: black;" href="index.html"></a>
+
+        <div class="w-100 d-flex flex-column align-items-center">
+            <form id="login-form" class="d-flex flex-column px-5 py-5">
+                <h1 class="h1 mb-5" style="color: gold;">Register Your Account</h1>
+                <span id="form-alert" class="d-none" style="color: red;">Please you must fill into the fields with *</span>
+                <div class=" input-containers d-flex gap-4 mb-4">
+                    <div>
+                        <label for="name" class="login-labels">Your First Name *</label>
+                        <br>
+                        <input autocomplete="name" id="form-fn-input" type="text" class="mt-2" placeholder="Enter First Name Here">
+                    </div>
+                    <div>
+                        <label for="email" class="login-labels">Your Last Name *</label>
+                        <br>
+                        <input autocomplete="name" id="form-ln-input" type="text" class="mt-2" placeholder="Enter Last Name Here">
+                    </div>
+                </div>
+
+                <div class="d-flex input-containers gap-4 justify-content-between my-4">
+                    <div class="d-flex">
+                        <label for="profile" class="login-labels">Set a Profile Picture:</label>
+                        <input type="file" id="login-profile-input" hidden accept="image/*" >
+                        <a id="login0" onclick="loadProfilePic()" class="bi bi-person-circle" href="#loginprof"></a>
+                    </div>
+                    <div>
+                        <label for="email" class="login-labels">Your Email Address *</label>
+                        <br>
+                        <input id="form-email-input" type="email" class="mt-2" placeholder="Enter your email address here">
+                    </div>
+                </div>
+                <div class="my-4">
+                    <label for="date" class="login-labels">Your Date Of Birth</label>
+                    <br>
+                    <input id="date-input" class="my-2 px-3" type="date">
+                </div>
+
+                <!-- P A S S W O R D -->
+                <div class="d-flex input-containers gap-4 justify-content-between my-4">
+                    <div>
+                        <label class="login-labels" for="password">Choose Password *</label>
+                        <br>
+                        <input autocomplete="" id="form-pass1-input" class="mt-2" type="password" placeholder="Choose a strong password">
+                    </div>
+                    <div>
+                        <label class="login-labels" for="password">Confirm Password *</label>
+                        <br>
+                        <input autocomplete="" id="form-pass2-input" class="mt-2" type="password" placeholder="Enter that password again">
+                    </div>
+                </div>
+
+                <a onclick="registerAccount()" id="submit-a" class="color-white mt-4" href="####">Register now</a>
+
+            </form>
+
+            <form action="login" id="login-form2" class="d-flex flex-column px-5 py-5 d-none">
+                <span class="color-white"><i class="bi-right"> </i> ✔ Your Account has been registered successfully, we will shortly send you a message to verify the authentication of the email address.</span>
+            </form>
+        </div>
+        
+    </div>
+
+    <script src="/Scripts/main.js"></script>
+</body>
+</html>

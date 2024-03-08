@@ -1,0 +1,72 @@
+#logo {
+    height: 3rem !important;
+    transition: all 0.2s ease-in-out;
+}
+
+header, header > * {
+ z-index: 3;
+}
+#logo:hover {
+    scale: 110%;
+    filter: drop-shadow(0px 0px 10px gray);
+}
+
+.nav-link {
+    color: rgb(9, 51, 51);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+.nav-link:hover {
+    color: teal;
+}
+
+
+/* logo-span-1 & logo-span-2 has been used in the logo title inside the Nav Bar */
+.logo-span-1 {
+    margin-top: 0.2rem;
+    display: block;
+    line-height: 1.3rem;
+    color: rgb(69, 69, 69);
+    cursor: default;
+    padding: 0.8rem 0.7rem 0.8rem 0;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Dancing Script' !important;
+}
+.logo-span-1:hover {
+    color: rgb(9, 99, 99);
+}
+
+
+.logo-span-2 {
+    font-size: 1.4em;
+    font-weight: 500;
+    width: 3rem;
+    font-family: 'Dancing Script' !important;
+}
+
+#side-tabs {
+    border-right: 1px solid rgb(221, 221, 221) !important;
+    top: 0;
+}
+
+#HeroSection {
+    overflow-y:hidden;
+    box-shadow: 2px 0px 20px rgba(135, 135, 135, 0.64);
+}
+
+/* ---------------------------------------For the filters container------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width:280px) {
+    .logo-span-1 {
+        display: none;
+    }
+}

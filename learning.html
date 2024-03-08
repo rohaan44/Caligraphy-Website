@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Calligraphy</title>
+
+    <!-- Links to online means --------------------------------------------------------------------------------------------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&family=Dancing+Script&family=Lato&family=Protest+Revolution&family=Protest+Riot&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet">
+
+    <!-- Local files are linked below: ------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="./Style/home.css">
+    <link rel="stylesheet" href="./Style/base.css">
+    <script src="./Scripts/jquery.js"></script>
+  </head>
+  <body>
+    <header>
+
+      <!-- This is the main Nav Bar div which contains ul > li > anchor elements -------------------------------------------->
+      <div
+        class="navbar navbar-expand-md justify-content-between bg-grey-gradient px-2 px-md-3">
+
+        <!-- This is the container which consists of the logo, and the two other divs containing links ---------------------->
+        <div class="container-fluid">
+
+          <div class="logo-container d-flex align-items-center">
+            <img id="logo" src="./Assets/Images/logo.png" alt>
+            <span class="logo-span-1">uick <br><span class="logo-span-2">‎
+                Calligraphy</span></span>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerD" aria-controls="navbarTogglerDemo01"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-list"></span>
+          </button>
+
+          <div class="nav" style="width: 63%;">
+            <div class="nav collapse navbar-collapse justify-content-between"
+              id="navbarTogglerD">
+              <ul class="nav align-items-center">
+                <li class="nav-item">
+                  <a onclick="NavLinkClick()" class="nav-link tab-anchors"
+                    id="home-link" aria-current="page"
+                    href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a onclick="NavLinkClick()"
+                    class="nav-link activee tab-anchors" aria-current="page"
+                    href="#">Learn</a>
+                </li>
+
+                <li class="nav-item">
+                  <a onclick="NavLinkClick()" class="nav-link tab-anchors"
+                    aria-current="page" href="shop.html">Store</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page"
+                    href="aboutus.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link tab-anchors" aria-current="page"
+                    href="#contact0">Contact Us</a>
+                </li>
+              </ul>
+
+              <ul class="nav align-items-center">
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page"
+                    href="authentication.html" id="login-reg">Login/Register</a>
+                </li>
+
+                <!-- Search Bar Div ------------------------------------------------------------------------->
+                <div id="SearchBarDiv"
+                  class="d-flex align-items-center d-none position-relative">
+                  <input type="text" id="search-input" name="search"
+                    placeholder="Search Around Here"
+                    style="margin-right: 0.4rem;">
+                  <button class="bi bi-search"
+                    onclick="SearchContent()"></button>
+                </div>
+
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#xyz"
+                    onclick="TriggerSearchBar()"><i class=" bi bi-search"
+                      id="search-btn"></i></a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+
+    <!--------------------------------------------------------------------------------------------------------------------->
+
+    <div id="central-container"
+      class="row container-fluid central-container py-5 bg-container parent-container">
+
+      <!-- This is the div which contains the filters, catagories and other things... ------------------------------------->
+      <div
+        class=" d-flex px-2 col-2 col-sm-1 flex-column bg-filters h-100 py-3 gap-4 position-sticky"
+        id="side-tabs">
+
+        <a id="side-tabs-toggler" class="bi-list my-2 ms-3" href="####"></a>
+
+        <li class="nav-item filters-li">
+          <a id="overview"
+            class="filterElements tab-anchors fe-overview px-2 py-1 rubik"
+            href="index.html#overview1" onclick="NavLinkClick()">Overview <i
+              class="bi bi-box-arrow-up-right"> </i></a>
+        </li>
+        <div class="ps-0 gap-2 d-flex flex-column border-top py-4">
+          <span class="filter-span mb-2 px-2 fe-learn"
+            style="color: rgb(179, 179, 179); cursor:default">Learn</span>
+          <li class="nav-item filters-li">
+            <a id="sa1"
+              class=" guide1 px-3 py-1 tab-anchors filterElements rubik fe-guide1"
+              href="#guide1" onclick="NavLinkClick()">Beginners</a>
+          </li>
+          <li class="nav-item filters-li">
+            <a id="sa2"
+              class=" guide2 px-3 py-1 tab-anchors filterElements rubik fe-guide2"
+              href="#guide2" onclick="NavLinkClick()">Amateurs</a>
+          </li>
+          <li class="nav-item filters-li">
+            <a id="sa3"
+              class=" guide3 px-3 py-1 tab-anchors filterElements rubik fe-guide3"
+              href="#guide3" onclick="NavLinkClick()">Complex</a>
+          </li>
+          <li class="nav-item filters-li">
+            <a id="sa4"
+              class=" guide4 px-3 py-1 tab-anchors filterElements rubik fe-guide4"
+              href="#guide4" onclick="NavLinkClick()">Advanced</a>
+          </li>
+
+        </div>
+
+        <li class="nav-item filters-li">
+          <a id="shop" onclick="NavLinkClick()"
+            class=" filterElements tab-anchors fe-shop px-2 py-1 rubik"
+            href="shop.html#">Store
+            <i class="bi bi-box-arrow-up-right"></i></a>
+        </li>
+
+        <li class="nav-item filters-li">
+          <a id="feedback" onclick="NavLinkClick()"
+            class="filterElements fe-feedback tab-anchors px-2 py-1 rubik"
+            href="index.html#feedback0">Feedback <i
+              class="bi bi-box-arrow-up-right"> </i></a>
+        </li>
+
+        <li class="nav-item filters-li">
+          <a id="contact" onclick="NavLinkClick()"
+            class="filterElements fe-contact tab-anchors px-2 py-1 rubik"
+            href="index.html#contact0">Contact<i
+              class="bi bi-box-arrow-up-right"> </i></a>
+        </li>
+
+      </div>
+
+      <section class="HeroSection w-100 py-5 col bg-white" id="HeroSection">
+
+        <!-- Now, the L E A R N I N G  section for BEGINNERS... -->
+        <span id="guide1"></span><br>
+        <div id="cd1"
+          class=" content-div header d-flex justify-content-between align-items-center mt-4 mb-5 px-3 py-5 border-top mx-3">
+
+          <div style="width: max-content; padding: 1rem 0 1rem;"
+            class="w-100 text-center">
+            <h1 class="h1 text-center w-100">Embarking the journey of learning
+              it!</h1>
+            <br>
+            <span class="span1 text-wrap lato text-center">A Beginner's
+              Guide</span>
+          </div>
+        </div>
+
+        <div class="container-fluid pe-3 border-bottom mb-5">
+
+          <div class="py-4 d-flex flex-column">
+            <img class="img1 align-self-center"
+              src="https://i0.wp.com/calligrascape.com/wp-content/uploads/2021/01/Basics.jpg?resize=584.5%2C578&ssl=1"
+              alt>
+
+            <div class="d-flex flex-column">
+              <p class=" p-3">
+                Welcome to the wonderful world of calligraphy! This graceful art
+                of beautiful writing can be both calming and rewarding, offering
+                a creative outlet and the joy of crafting personalized messages.
+                While mastering calligraphy takes time and practice, even
+                beginners can start their journey with a few fundamental steps:
+              </p>
+              <ol class="d-flex flex-column">
+                <li>
+                  <span class=" span3 span-color1">Grasp the Basics:</span>
+                  Calligraphy relies on the interplay of thick and thin strokes.
+                  Imagine the pen pressure increasing on downward strokes
+                  (creating thick lines) and lightening on upward strokes
+                  (creating thin lines). Practice these basic strokes –
+                  upstrokes, downstrokes, and curves – to get comfortable with
+                  your chosen tool and develop muscle memory.
+                </li>
+                <img class="img1" src="/Assets/Images/pen-writing.jpeg" alt>
+                <br>
+                <li>
+                  <span class=" span3 span-color1">Alphabet Breakdown:</span>
+                  Don't be intimidated by the entire alphabet! Many calligraphy
+                  styles utilize a core set of basic strokes to form individual
+                  letters. Start by focusing on a single style, like
+                  foundational or pointed pen, and learn how these strokes
+                  combine to create each letterform. Work your way through the
+                  alphabet slowly, practicing each letter until it feels
+                  natural.
+                </li>
+                <img class="img1" src="/Assets/Images/alpha-breakdown.jpeg" alt>
+                <br>
+                <li>
+                  <span class=" span3 span-color1">Tool Time:</span> While fancy
+                  calligraphy tools exist, you can absolutely begin with readily
+                  available items! Start with a smooth, bleed-proof paper and a
+                  fine-tipped pen like a micron or gel pen. As you progress,
+                  explore tools like brush pens or pointed pen nibs and ink for
+                  more expressive possibilities. Remember, the right tool is the
+                  one that feels comfortable and allows you to control your
+                  strokes effectively.
+                </li>
+                <br>
+                <li>
+                  <span class=" span3 span-color1">Practice Makes
+                    Progress:</span> Like any skill, calligraphy requires
+                  dedication and consistent practice. Set aside some time each
+                  day, even if it's just for 15 minutes, to practice your basic
+                  strokes and letterforms. Utilize practice sheets, workbooks,
+                  or even blank paper to experiment and refine your technique.
+                  Most importantly, be patient and celebrate every improvement,
+                  no matter how small.
+                </li>
+                <img class="img1" src="/Assets/Images/pen-writing-2.jpeg" alt>
+              </ol>
+              <p class="p-3">
+                Remember, the journey of calligraphy is filled not just with
+                discovery and personal expression, but also with patience,
+                perseverance, and moments of pure joy. There will be times when
+                strokes refuse to cooperate, letters appear awkward, and
+                frustration might arise. But don't let those moments discourage
+                you. Each struggle presents an opportunity to learn, grow, and
+                refine your technique. Embrace the imperfections as stepping
+                stones on your path to mastery.
+                <br>
+                <br>
+                As you practice, find inspiration in the works of renowned
+                calligraphers, past and present. Explore different styles, from
+                the elegant fluidity of Italic to the bold dynamism of Gothic.
+                Experiment with tools and materials, discovering how each nib,
+                brush, and ink creates unique textures and expressions. Immerse
+                yourself in the rich history of calligraphy, understanding how
+                this art form has evolved and served diverse cultures and
+                purposes.
+              </p>
+              <br>
+              <br>
+              <div class="align-center d-flex align-items-center hover-border">
+                <img class="img2" src="/Assets/Images/profile.png" alt>
+                <span class=" span2">Guide by<br>~Sameer Khan (CEO)</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- This one is LEARNING SECTION for AMATUERS -->
+        <span id="guide2"></span>
+        <br>
+        <div id="cd2"
+          class="header d-flex justify-content-between align-items-center mt-4 mb-5 px-3 mt-4 py-4 border-top mx-3">
+
+          <div style="width: max-content;" class="w-100 text-center">
+
+            <br>
+            <h1 class="h1 text-center w-100">Level Up The Calligraphy!</h1>
+            <br>
+            <span class="span1 text-wrap lato text-center">A Guide for Aspiring
+              Amateurs</span>
+          </div>
+        </div>
+
+        <div class="container-fluid pe-3 border-bottom">
+
+          <div class="py-4 d-flex flex-column">
+            <img class="img1 align-self-center"
+              src="https://i.etsystatic.com/7681840/r/il/69392f/462177213/il_680x540.462177213_l28c.jpg"
+              alt>
+
+            <div class="d-flex flex-column">
+              <p class=" p-3">
+                If you have already came reading all the way through our <a
+                  href="#guide1" class="span-linkable">Beginner's Guide</a>,
+                then <b>congratulations</b>! You've mastered the basics of
+                calligraphy and are ready to dive deeper into this beautiful art
+                form. This guide is your stepping stone to becoming an
+                <b>aspiring amateur</b>, equipped with essential skills and
+                knowledge to refine your technique and explore new
+                possibilities.
+              </p>
+              <ol class="d-flex flex-column">
+                <li>
+                  <span class=" span3 span-color1">Mastering the
+                    Fundamentals:</span>
+                  <br>
+                  <br>
+                  <ul class="d-flex flex-column">
+                    <li>
+                      <span class=" span3 span-color1">Refine your grip and
+                        posture: </span> Ensure a comfortable and consistent
+                      grip that allows for controlled strokes. Practice proper
+                      posture to avoid fatigue and maintain good form.
+                    </li>
+                    <br>
+                    <li>
+                      <span class=" span3 span-color1">Control your pressure:
+                      </span>Remember, pressure variation creates the
+                      characteristic thick and thin lines. Practice drills to
+                      achieve consistent pressure control for smooth and
+                      confident strokes.
+                    </li>
+                    <br>
+                    <img class="img1" src="/Assets/Images/pen-writing-3.jpeg"
+                      alt>
+                    <br>
+                    <li>
+                      <span class=" span3 span-color1">Expand your letterform
+                        knowledge:</span> Explore different variations of basic
+                      letterforms, like capitals, lowercase, and embellishments.
+                      Experiment with spacing and proportions to create
+                      harmonious compositions.
+                    </li>
+                    <br>
+                    <img class="img1" src="/Assets/Images/calligraphy1.jpeg"
+                      alt>
+                  </ul>
+                </li>
+                <br>
+                <li>
+                  <span class=" fw-bold span-color1"> Explore New Tools and
+                    Techniques:</span>
+                  <br>
+                  <ul class="d-flex flex-column">
+                    <br>
+                    <li>
+                      <span class=" span3 span-color1">Experiment with nibs and
+                        inks: </span> Different nibs create unique line widths
+                      and textures. Experiment with different ink colors and
+                      properties to discover your preferred style and achieve
+                      desired effects.
+                    </li>
+                    <br>
+                    <img class="img1" src="/Assets/Images/experiment1.jpeg" alt>
+                    <br>
+                    <li>
+                      <span class=" span3 span-color1">Learn about flourishing
+                        and embellishments:</span> Add flourishes and
+                      embellishments to your letters for an extra touch of
+                      elegance and personalization. Practice basic flourishes
+                      and explore different styles to complement your chosen
+                      script.
+                    </li>
+                    <img class="img1" src="/Assets/Images/embellishment.jpeg"
+                      alt>
+                    <br>
+                    <li>
+                      <span class=" span3 span-color1">Consider brush
+                        calligraphy:</span> If you haven't already, explore the
+                      expressive possibilities of brush calligraphy. Learn about
+                      brush control, ink loading, and basic strokes to create
+                      dynamic and expressive lettering.
+                    </li>
+                  </ul>
+                </li>
+                <br>
+                <br>
+                <li>
+                  <span class=" fw-bold span-color1">Deepen Your Knowledge and
+                    Inspiration:</span>
+                  <br>
+                  <ul class="d-flex flex-column">
+                    <br>
+                    <li>
+                      <span class=" span3 span-color1">Study historical and
+                        contemporary calligraphers:</span> Immerse yourself in
+                      the works of renowned calligraphers, past and present.
+                      Analyze their techniques, styles, and compositions to gain
+                      inspiration and insights.
+                    </li>
+                    <br>
+                    <li>
+                      <span class=" span3 span-color1">Join workshops and online
+                        communities:</span> Connect with other aspiring
+                      calligraphers through workshops, online forums, and social
+                      media groups. Share your work, learn from others, and
+                      participate in discussions to stay motivated and inspired.
+                    </li>
+                    <li>
+                      <span class=" span3 span-color1">Practice consistently:
+                      </span> The key to improvement is consistent practice. Set
+                      aside dedicated time each day or week to work on your
+                      calligraphy, even if it's just for a short period.
+                    </li>
+                    <br>
+                    <br>
+                  </ul>
+
+                  <li>
+                    <span class=" span3 span-color1">Embrace the Journey:</span>
+                    <br>
+                    <br>Remember, the path to mastering calligraphy is a
+                    beautiful journey, filled with challenges, discoveries, and
+                    moments of pure joy. Embrace the learning process, celebrate
+                    your progress, and don't be afraid to experiment and express
+                    your unique creative voice.
+                    <br><br>
+                    With dedication, practice, and a thirst for discovery,
+                    you'll soon find yourself confidently navigating the world
+                    of calligraphy as an accomplished amateur, ready to explore
+                    even more advanced techniques and styles.
+                    <br><br>
+                    <b>Bonus Tip:</b> Consider incorporating your newfound
+                    calligraphy skills into personalized gifts, home decor, or
+                    even creative journaling for a rewarding and meaningful
+                    application of your art.
+                    <br><br>
+                    We hope this guide inspires you further to continue your
+                    calligraphy journey!
+                  </li>
+                </ol>
+                <br>
+                <br>
+                <div
+                  class="align-center d-flex align-items-center hover-border">
+                  <img class="img2" src="/Assets/Images/profile.png" alt>
+                  <span class=" span2">Guide by<br>~Sameer Khan (CEO)</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Now, this is a guide for C O M P L E X Calligraphy ---------------------------------------------------------->
+          <span id="guide3"></span>
+          <br>
+          <div id="cd3"
+            class="header d-flex justify-content-between align-items-center mt-4 mb-5 px-3 mt-4 py-4 border-top mx-3">
+            <div style="width: max-content;" class="w-100 text-center">
+              <br>
+              <h1 class="h1 text-center w-100">Unveiling the Complexities!</h1>
+              <br>
+              <span class="span1 text-wrap lato text-center">A Guide for
+                Discerning Calligraphers</span>
+            </div>
+          </div>
+
+          <div class="container-fluid pe-3">
+
+            <div class="py-4 d-flex flex-column">
+              <img class="img1 align-self-center"
+                src="/Assets/Images/guide3.jpeg" alt>
+
+              <div class="d-flex flex-column">
+                <p class=" p-3">
+                  Greetings, calligraphy enthusiasts! Having honed your skills
+                  beyond the realm of the <a class="span-linkable"
+                    href="#guide2">amateur</a>, you now stand at the precipice
+                  of the intricate world of complex calligraphy. This guide
+                  serves as your compass, navigating you through advanced
+                  techniques, nuanced styles, and artistic explorations that
+                  will elevate your craft to new heights.
+                </p>
+                <ol class="d-flex flex-column">
+                  <li>
+                    <span class=" span3 span-color1"> Delving into Advanced
+                      Techniques:</span>
+                    <br>
+                    <br>
+                    <ul class="d-flex flex-column">
+                      <li>
+                        <span class=" span3 span-color1">Mastering shading and
+                          layering:</span> Explore advanced shading techniques
+                        like chiaroscuro and wet-on-wet to create depth,
+                        dimension, and a sense of realism in your lettering.
+                      </li>
+                      <br>
+                      <img class="img1" src="/Assets/Images/calligraphy2.jpeg"
+                        alt>
+                      <br>
+                      <li>
+                        <span class=" span3 span-color1">Embracing complex
+                          letterforms:</span>Delve into intricate script
+                        variations like Gothic textura quadrata, Arabic
+                        muhaqqaq, or Chinese xingshu, known for their elaborate
+                        letterforms and challenging composition rules.
+                      </li>
+                      <br>
+                      <img class="img1"
+                        src="/Assets/Images/complex-letterforms.jpeg" alt>
+                      <br>
+                      <li>
+                        <span class=" span3 span-color1">Conquering gilding and
+                          illumination: </span> Elevate your work with the art
+                        of gilding, applying metallic elements for added
+                        grandeur, or explore the vibrant world of illumination,
+                        creating stunning decorative borders and embellishments.
+                      </li>
+                      <br>
+                      <img class="img1" src="/Assets/Images/illumination.jpeg"
+                        alt>
+                    </ul>
+                  </li>
+                  <br>
+                  <li>
+                    <span class=" fw-bold span-color1">Exploring Diverse
+                      Calligraphic Styles:</span>
+                    <br>
+                    <ul class="d-flex flex-column">
+                      <br>
+                      <li>
+                        <span class=" span3 span-color1">Unearthing historical
+                          scripts:</span> Immerse yourself in the rich tapestry
+                        of historical scripts like Coptic, Merovingian, or
+                        Glagolitic, each with unique letterforms and cultural
+                        significance.
+                      </li>
+                      <br>
+                      <img class="img1"
+                        src="/Assets/Images/historical-script.jpeg" alt>
+                      <br>
+                      <li>
+                        <span class=" span3 span-color1">Embracing contemporary
+                          interpretations: </span> Discover the works of
+                        contemporary calligraphers who push boundaries and
+                        experiment with unconventional tools, materials, and
+                        styles. Find inspiration in their innovative approaches.
+                      </li>
+                      <img class="img1" src="/Assets/Images/interpretions.jpeg"
+                        alt>
+                      <br>
+                      <li>
+                        <span class=" span3 span-color1">Exploring
+                          cross-cultural fusions:</span> Delve into the
+                        fascinating world of calligraphy where different scripts
+                        and traditions merge, creating unique and visually
+                        stunning hybrid styles.
+                      </li>
+                    </ul>
+                  </li>
+                  <br>
+                  <br>
+                  <li>
+                    <span class=" fw-bold span-color1">Cultivating Your Artistic
+                      Voice:</span>
+                    <br>
+                    <ul class="d-flex flex-column">
+                      <br>
+                      <li>
+                        <span class=" span3 span-color1">Developing your
+                          personal style:</span> Experiment with different
+                        techniques, materials, and scripts to discover what
+                        resonates with your artistic sensibilities and vision.
+                      </li>
+                      <br>
+                      <li>
+                        <span class=" span3 span-color1">Infusing meaning into
+                          your work:</span> Explore ways to infuse your
+                        calligraphy with deeper meaning and symbolism, whether
+                        through personal narratives, cultural references, or
+                        emotional expressions.
+                      </li>
+                      <li>
+                        <span class=" span3 span-color1">Joining the artistic
+                          community:</span> Engage with fellow complex
+                        calligraphy enthusiasts through exhibitions, workshops,
+                        and online forums to share your work, gain feedback, and
+                        collaborate on creative projects.
+                      </li>
+                      <br>
+                      <br>
+                    </ul>
+
+                    <li>
+                      <span class=" span3 span-color1">Embrace the
+                        Journey:</span>
+                      <br>
+                      <br>Remember, The journey of <a class="span-linkable"
+                        href="#guide3">complex calligraphy</a> is a lifelong
+                      pursuit filled with challenges, breakthroughs, and moments
+                      of artistic fulfillment. Embrace the learning process,
+                      experiment fearlessly, and let your passion guide you as
+                      you create <b>breathtakingly intricate and expressive
+                        works of art</b>.
+                      <br><br>
+                      Bonus Tip: Consider using your advanced calligraphy skills
+                      to create commissioned pieces, participate in
+                      competitions, or even teach workshops yourself, sharing
+                      your knowledge and inspiring others.
+                      <br><br>
+                      We hope this guide, empowers you to explore the
+                      <b>exciting world of complex calligraphy</b>!
+                    </li>
+                  </ol>
+                  <br>
+                  <br>
+                  <div
+                    class="align-center d-flex align-items-center hover-border">
+                    <img class="img2" src="/Assets/Images/profile.png" alt>
+                    <span class=" span2">Guide by<br>~Sameer Khan (CEO)</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Now, this is a guide for C O M P L E X Calligraphy ---------------------------------------------------------->
+            <span id="guide4"></span>
+            <br>
+            <div id="cd4"
+              class="header d-flex justify-content-between align-items-center mt-4 mb-5 px-3 mt-4 py-4 border-top mx-3">
+              <div style="width: max-content;" class="w-100 text-center">
+                <br>
+                <h1 class="h1 text-center w-100">Ascending to Mastery!</h1>
+                <br>
+                <span class="span1 text-wrap lato text-center">A Guide for
+                  Advanced Calligraphers</span>
+              </div>
+            </div>
+
+            <div class="container-fluid pe-3 border-bottom">
+
+              <div class="py-4 d-flex flex-column">
+                <img class="img1 align-self-center"
+                  src="/Assets/Images/guide4.jpeg" alt>
+
+                <div class="d-flex flex-column">
+                  <p class=" p-3">
+                    Congratulations, esteemed calligrapher! You've conquered the
+                    fundamentals, navigated the intricacies, and now stand
+                    poised on the cusp of mastery. This final guide serves as
+                    your map to the highest peaks of this art form, where
+                    creativity reigns supreme and expression finds its ultimate
+                    canvas.
+                  </p>
+                  <ol class="d-flex flex-column">
+                    <li>
+                      <span class=" span3 span-color1">Unveiling the Secrets of
+                        Masters</span>
+                      <br>
+                      <br>
+                      <ul class="d-flex flex-column">
+                        <li>
+                          <span class=" span3 span-color1">Delving into
+                            historical treatises:</span> Study the works of
+                          renowned calligraphy masters like Ibn Muqla, William
+                          Morris, or Kazuaki Tomokawa, deciphering their
+                          techniques and philosophies to refine your own
+                          approach.
+                        </li>
+                        <br>
+                        <li>
+                          <span class=" span3 span-color1">Mastering advanced
+                            composition:</span> Explore advanced layout and
+                          composition techniques like golden ratio, negative
+                          space utilization, and dynamic balance to create
+                          visually captivating and harmonious pieces.
+                        </li>
+                        <br>
+                        <img class="img1" src="/Assets/Images/calligraphy3.jpeg"
+                          alt>
+                        <br>
+                        <li>
+                          <span class=" span3 span-color1">Harnessing the power
+                            of color and texture: </span> Experiment with
+                          advanced color blending, layering, and texturing
+                          techniques to imbue your work with depth, emotion, and
+                          captivating visual impact.
+                        </li>
+                        <br>
+                        <img class="img1"
+                          src="/Assets/Images/illumination2.jpeg" alt>
+                      </ul>
+                    </li>
+                    <br>
+                    <li>
+                      <span class=" fw-bold span-color1">Pushing the Boundaries
+                        of Expression:</span>
+                      <br>
+                      <ul class="d-flex flex-column">
+                        <br>
+                        <li>
+                          <span class=" span3 span-color1">Developing your
+                            artistic signature:</span> Hone your unique style to
+                          its peak, pushing the boundaries of convention and
+                          injecting your personal voice into every stroke.
+                          Experiment with unconventional materials, tools, and
+                          techniques.
+                        </li>
+                        <br>
+                        <li>
+                          <span class=" span3 span-color1">Exploring calligraphy
+                            as fine art: </span> Transition your calligraphy
+                          from functional lettering to standalone art pieces.
+                          Consider framing your work, participating in
+                          exhibitions, or collaborating with other artists to
+                          showcase your artistry.
+                        </li>
+                        <br>
+                        <li>
+                          <span class=" span3 span-color1">Sharing your
+                            knowledge and passion:</span> Mentor aspiring
+                          calligraphers, teach workshops, or create online
+                          resources to share your expertise and inspire the next
+                          generation of artists.
+                        </li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <br>
+                  <p><span class="span3 span-color1">Remember</span>, The
+                    journey of <a class="span-linkable" href="#guide4">advanced
+                      calligraphy</a> is not about achieving perfection, but
+                    about continuous exploration, personal growth, and pushing
+                    your creative boundaries. Embrace the process, celebrate
+                    your individuality, and let your passion guide you as you
+                    create truly remarkable works of art that transcend <b>mere
+                      lettering</b>.</p>
+                  <br><br>
+                  <span class="ps-3 span3 span-color1">Beyond This Guide:</span>
+                  <br><br>
+                  <p>This guide marks the final stage of our learning guides.
+                    However, your journey as a calligrapher continues forever.
+                    Remember, the world of calligraphy is vast and
+                    ever-evolving, offering endless possibilities for
+                    exploration and experimentation. Keep seeking inspiration,
+                    pushing your limits, and contributing to the rich legacy of
+                    this timeless art form.</p>
+                  <br><br>
+                  <p><span class="span3 span-color1">Bonus Tip:</span> Consider
+                    specializing in a specific calligraphy niche, like Islamic
+                    illumination, historical script revival, or modern abstract
+                    calligraphy, to become a true master in your chosen
+                    domain.</p>
+
+                  <p>We hope this final guide empowers you to continue your
+                    journey towards calligraphy mastery and <b>share your unique
+                      artistic voice</b> with the world!</p>
+                  <br><br>
+
+                  <div
+                    class="align-center d-flex align-items-center hover-border">
+                    <img class="img2" src="/Assets/Images/profile.png" alt>
+                    <span class=" span2">Guide by<br>~Sameer Khan (CEO)</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </section>
+        </div>
+
+        <!-------------------- Now starts the F O O T E R ----------------------------------------------------------------------->
+
+        <footer class="bg-grey-gradient z-3 position-sticky">
+          <div class="container-fluid px-4 py-4 ">
+            <!-- This is the row which contains the columns --------------------------------------------------------------------->
+            <div class="row row-cols-md">
+
+              <div class="col-12 col-md-3 d-flex flex-column mb-4 mb-sm-1">
+
+                <div
+                  class="py-sm-3 mb-4 my-sm-0 align-items-center d-flex flex-column d-sm-block">
+                  <div class="logo-container d-flex align-items-center">
+                    <img id="logo" src="./Assets/Images/logo.png" alt>
+                    <span class="logo-span-1">uick <br><span
+                        class="logo-span-2">Calligraphy</span></span>
+                  </div>
+                  <span class="footer-text">We put the 'you' in 'unique</span>
+                </div>
+
+                <div
+                  class="d-block w-100 justify-content-evenly d-sm-flex d-md-block">
+                  <a class="footer-text me-1"><i class="bi bi-map-fill"></i>
+                    Karachi City, Pakistan</a>
+                  <br>
+                  <a class="footer-text me-1"><i class="bi bi-phone-fill"></i>
+                    +92 313 282 6142</a>
+                  <br>
+                  <a class="footer-text me-1 text-break"><i
+                      class="bi bi-envelope-fill"></i>
+                    customer@quickcallygraphy.com</a>
+                </div>
+
+              </div>
+
+              <div class="col-6 col-sm-3 footer-tab-width">
+                <span class="footer-h1">Our Catagories</span>
+                <br>
+                <span class="footer-h2">Calligraphy By Difficulties</span>
+                <ul>
+                  <li class="footer-text">For Beginners</li>
+                  <li class="footer-text">Amateur</li>
+                  <li class="footer-text">Complex</li>
+                  <li class="footer-text">Advanced</li>
+                </ul>
+                <span class="footer-h2">Calligraphy By Languages</span>
+                <ul>
+                  <li class="footer-text">Urdu</li>
+                  <li class="footer-text">Arabic</li>
+                  <li class="footer-text">Greek</li>
+                  <li class="footer-text">Indic</li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-sm-3 col-md-3 footer-tab-width">
+                <span class="footer-h1 mb-2">Our Links</span>
+
+                <div class="ps-2 d-flex flex-column p-4 p-md-1"
+                  style="gap: 0.94rem;">
+                  <a class="footer-h2 my-1">Artistic Guides</a>
+                  <a class="footer-h2">Privacy Policy</a>
+                  <a class="footer-h2">Returns</a>
+                  <a class="footer-h2">Order Tracking</a>
+                  <a class="footer-h2">Contact Us</a>
+                  <a class="footer-h2">Our Sitemap</a>
+
+                </div>
+              </div>
+
+              <div class="col-10 col-sm col-md">
+                <span class="footer-h1">NEWSLETTER</span>
+                <br>
+                <input class="w-100" type="text" name="email"
+                  placeholder="Enter your Email Here">
+                <button class="bi-envelope-fill" onclick="SignUpContact()"> ‎
+                  SIGN UP</button>
+              </div>
+
+            </div>
+          </div>
+        </footer>
+
+        <!------------------------------------------- S C R I P T ------------------------------------------------>
+        <script>
+            // Activate anchors according to scroll positions
+            const cd1 = document.getElementById("cd1")
+            const cd2 = document.getElementById("cd2")
+            const cd3 = document.getElementById("cd3")
+            const cd4 = document.getElementById("cd4")
+            
+            const sa1 = document.getElementById("sa1")
+            const sa2 = document.getElementById("sa2")
+            const sa3 = document.getElementById("sa3")
+            const sa4 = document.getElementById("sa4")
+            
+            window.addEventListener('scroll' , () => {
+                let rect1 = cd1.getBoundingClientRect()
+                let rect2 = cd2.getBoundingClientRect()
+                let rect3 = cd3.getBoundingClientRect()
+                let rect4 = cd4.getBoundingClientRect()
+            
+                if (rect1.top <= 100) {
+                    if ($(".filterElements").hasClass("activee"))  {
+                        $(".filterElements").removeClass("activee")
+                        sa1.classList.add("activee")
+                    }
+            
+                    if (!$(".filterElements").hasClass("inactivee")) {
+                        $(".filterElements").addClass("inactivee")
+                        sa1.classList.add("activee")
+                    }
+                }
+            
+                if (rect2.top <= 100) {
+                    if ($(".filterElements").hasClass("activee"))  {
+                        $(".filterElements").removeClass("activee")
+                        sa2.classList.add("activee")
+                    }
+            
+                    if (!$(".filterElements").hasClass("inactivee")) {
+                        $(".filterElements").addClass("inactivee")
+                        sa2.classList.add("activee")
+                    }
+                }
+            
+                if (rect3.top <= 100) {
+                    if ($(".filterElements").hasClass("activee"))  {
+                        $(".filterElements").removeClass("activee")
+                        sa3.classList.add("activee")
+                    }
+            
+                    if (!$(".filterElements").hasClass("inactivee")) {
+                        $(".filterElements").addClass("inactivee")
+                        sa3.classList.add("activee")
+                    }
+                }
+            
+                if (rect4.top <= 150) {
+                    if ($(".filterElements").hasClass("activee"))  {
+                        $(".filterElements").removeClass("activee")
+                        sa4.classList.add("activee")
+                    }
+            
+                    if (!$(".filterElements").hasClass("inactivee")) {
+                        $(".filterElements").addClass("inactivee")
+                        sa4.classList.add("activee")
+                    }
+                }
+            })
+          </script>
+
+        <script src="./Scripts/main.js"></script>
+      </body>
+    </html>

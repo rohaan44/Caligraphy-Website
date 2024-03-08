@@ -1,0 +1,50 @@
+.header {
+    padding: 2rem;
+}
+
+.h1 {
+    color: rgb(159, 130, 0);
+    font-family: "Dancing Script";
+    border-top: none !important;
+    border-bottom: none !important;
+    font-size: 3.5rem !important;
+    padding: 0 !important;
+    margin-bottom: 0;
+}
+
+.span1 {
+    color: gray;
+    font-family: "Delius Swash", sans-serif;
+    font-size: 1.08rem;
+}
+
+.bi-filter {
+    font-size: 2rem;
+    color: rgb(196, 196, 196);
+    transition: all 0.2s ease-in-out;
+    padding: 1rem;
+    border-radius: 100%;
+}
+.bi-filter:hover {
+    background: rgba(212, 212, 212, 0.27);
+}
+
+#filter-popup {
+    transform: translateX(-80%) translateY(20%);
+    position: absolute;
+    width: 25rem;
+    z-index: 4;
+    box-shadow: 2px 0px 20px rgba(140, 140, 140, 0.461);
+}
+
+.popup-child {
+    flex-wrap: wrap;
+}
+
+.span-filter {
+    text-wrap: nowrap;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 0.8rem;
+    border-inline-end: 1px solid rgb(230, 230, 230);
+}
